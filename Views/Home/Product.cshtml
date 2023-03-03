@@ -1,0 +1,330 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = Model.Product?.Name;
+}
+
+<section class="container">
+    <div class="row product-card">
+        <div class="col-xs-12 col-sm-6">
+            <div class="slider-wrapper">
+                <div class="ppslider slick-initialized slick-slider" id="product-slider">
+                    <div class="slick-list">
+                        <div class="slick-track" style="opacity: 1; width: 1500px;">
+                            @foreach (var image in Model.Product?.Images)
+                            {
+                                <div id="image-@image.Id-large" class="ppslider__item slick-slide slick-current slick-active"
+                                     data-slick-index="0" aria-hidden="false"
+                                     style="width: 500px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
+                                     tabindex="0">
+                                     <img src="@image.Uri"
+                                          alt="@Model.Product.Name"
+                                          data-zoom-image="@image.Uri">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="ppslider-nav slick-initialized slick-slider">
+                    <div class="slick-list">
+                        <div class="slick-track"
+                             style="opacity: 1; width: 375px; transform: translate3d(0px, 0px, 0px);">
+                            @foreach (var image in Model.Product?.Images)
+                            {
+                                <div class="ppslider-nav__item slick-slide slick-active" id="image-@image.Id"
+                                     data-slick-index="0" aria-hidden="false" style="width: 124px;" tabindex="0">
+                                     <img src="@image.Uri"
+                                          alt="@Model.Product.Name">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div id="product-full" class="product">
+                <div class="hidden">
+                    <input type="hidden" value="/product/@Model.Product.Tag" name="referrer">
+                    <input id="id_sku" data-id="id_sku" name="sku" script_target="sku_input" type="hidden"
+                           value="@Model.Product.Id">
+                    <input id="id_quantity" type="hidden" name="quantity" min="1" value="1">
+                </div>
+                <h1 class="product-header">
+                    @Model.Product.Name
+                </h1>
+                <div class="product-sku">Артикул: <span>@Model.Product.Id</span></div>
+                <div class="product-price">@Model.Product.Price <span>грн</span></div>
+
+                <div class="p-tabs">
+                    <ul class="p-tabs__caption">
+                        <li id="descr" class="active" onclick="switchDescription()">
+                            Опис
+                        </li>
+                        <li id="compos" onclick="switchDescription(1)">
+                            Склад
+                        </li>
+                    </ul>
+
+                    <div class="p-tabs__data description-and-composition" style="margin-bottom: 15px">
+                        <div id="descr-tab" class="p-tabs__content active">
+
+                            @Model.Product.Description
+
+                        </div>
+                        <div id="compos-tab" class="p-tabs__content active" style="display: none">
+
+                            @Model.Product.Composition
+
+                            <div class="attention-block" style="margin-top: 20px; margin-bottom: 20px">
+                                <sup>*</sup> <span>Lileya</span>
+                                залишає за собою право вносити невеликі дизайнерські зміни, виконуючи Ваш букет або
+                                композицію, які не вплинуть на стиль, форму, кольорові рішення Вашого замовлення і
+                                не знизять цінність флористичного об'єкту.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="size-block-title">
+                    Розмір:
+                </div>
+                <div class="size-block">
+                    <ul class="size-block__sizes">
+                        <li>
+                            <span class="size-block__size active">@Model.Product.Size</span>
+                        </li>
+                    </ul>
+                    <div class="size-block__info">
+                        @if (Model.Product.Diameter != null && Model.Product.Diameter > 0)
+                        {
+                            <div class="size-block__data">
+                                <img src="~/img/diametr_2.png" alt="Діаметр" style="opacity: 0.4">
+                                <p>
+                                    @Model.Product.Diameter см&nbsp
+                                    <span></span><br>
+                                    <span>Діаметр</span>
+                                </p>
+                            </div>
+
+                            <div class="size-block__data">
+                                <img src="~/img/height_2.png" alt="Висота" style="opacity: 0.4">
+                                <p>
+                                    @Model.Product.Height см&nbsp
+                                    <span></span><br>
+                                    <span>Висота</span>
+                                </p>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="other-info-block">
+                    <div class="other-info-block__sub">
+                        <p>Оплата:</p>
+                        <span>
+                            Для Вашої зручності, ми надаємо найширший вибір способів оплати
+                        </span>
+                        <span class="other-info-block__sub__details">
+                            <a href="/oplata/">Детальніше</a>
+                        </span>
+                    </div>
+                    <div class="other-info-block__sub">
+                        <p>Доставка:</p>
+                        <span>
+                        </span>
+                        <span class="other-info-block__sub__details">
+                            <a href="/dostavka/">Детальніше</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="product-stock">
+                    <div class="product-stock__title">
+                        Наявність:
+                    </div>
+                    <div class="product-stock__city" data-stock="1">
+                        Київ
+                    </div>
+                    <div class="product-stock__city" data-stock="0" style="display: none;">
+                        Харків
+                    </div>
+                </div>
+            </div>
+            <div class="action-block">
+                <button id="btn-in-cart" class="btn-standard btn-xl add_to_cart"
+                        onclick="handleClick(event)">
+                    в кошик
+                </button>
+            </div>
+            <div class="p-info">
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts
+{
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.ppslider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                draggable: false,
+                swipe: false,
+                asNavFor: '.ppslider-nav'
+            });
+            $('.ppslider-nav').slick({
+                slidesToShow: 4,
+                //slidesToScroll: 1,
+                asNavFor: '.ppslider',
+                //centerMode: true,
+                focusOnSelect: true,
+                horizontal: true,
+                centerPadding: '0px',
+                swipe: false,
+                draggable: false
+            });
+
+            $('#product-slider img').elevateZoom({
+                zoomType: 'window',
+                zoomWindowWidth: 600,
+                zoomWindowHeight: 600,
+                zoomWindowOffetx: 5,
+                borderSize: 1,
+                zoomWindowFadeIn: 500,
+                zoomWindowFadeOut: 500,
+                lensFadeIn: 500,
+                lensFadeOut: 500
+            });
+
+
+            $('#product-upsale').owlCarousel({
+                loop: false,
+                nav: true,
+                dots: false,
+                navText: ['&#8249;', '&#8250;'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            });
+
+            $('#product-related').owlCarousel({
+                loop: false,
+                nav: true,
+                dots: false,
+                navText: ['&#8249;', '&#8250;'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            });
+
+            $('#product-seen').owlCarousel({
+                loop: true,
+                nav: true,
+                navText: ['&#8249;', '&#8250;'],
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            });
+
+        });
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            let cart = localStorage.getItem('cart')
+            if (cart) {
+                cart = JSON.parse(cart)
+                if (cart.products.find(x => x.id === @Model.Product.Id)) {
+                    document.getElementById('btn-in-cart').innerText = "видалити з кошика"
+                }
+            }
+        })
+
+        function handleClick(event) {
+            let cart = localStorage.getItem('cart')
+            if (cart) {
+                cart = JSON.parse(cart)
+            }
+            else {
+                cart = {
+                    moneyAmount: 0,
+                    totalQuantity: 0,
+                    deliveryCost: 0,
+                    products: []
+                }
+            }
+            const product = {
+                id: @Model.Product.Id,
+                name: '@Model.Product.Name',
+                price: @Model.Product.Price,
+                img: '@Model.Product.Images.ElementAt(0).Uri',
+                qty: 1
+            }
+            const prodInCart = cart.products.find(x => x.id === product.id)
+            if (prodInCart) {
+                removeFromCart(cart, prodInCart)
+                event.target.innerText = "в кошик"
+            }
+            else {
+                addToCart(cart, product)
+                event.target.innerText = "видалити з кошика"
+            }
+        }
+    </script>
+    <script>
+        function switchDescription(mode) {
+            if (mode === 1) {
+                $('#descr').removeClass('active')
+                $('#compos').addClass('active')
+                $('#descr-tab').css('display', 'none')
+                $('#compos-tab').css('display', 'block')
+            }
+            else {
+                $('#descr').addClass('active')
+                $('#compos').removeClass('active')
+                $('#descr-tab').css('display', 'block')
+                $('#compos-tab').css('display', 'none')
+            }
+        }
+    </script>
+}

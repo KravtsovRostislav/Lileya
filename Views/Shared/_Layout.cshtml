@@ -1,0 +1,971 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<script type="text/javascript" async="" src="~/js/js.js"></script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>@ViewData["Title"] | Лілея</title>
+    <link rel="shortcut icon" href="~/favicon.ico" />
+    <link rel="stylesheet" href="~/css/css.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/lorashen.css" />
+    <link rel="stylesheet" href="~/css/swal2.css" />
+    <link rel="stylesheet" href="~/css/preorder_popup.css">
+</head>
+
+<body>
+<div class="notice-wrap">
+    <div class="notice-bar">
+        Сьогодні і щодня ми працюємо з 9.00 до 20.00. Світло в нашій студії від генераторів, воду в запасі для квітів ми
+        тримаємо на всяк випадок.
+        Тому заходьте до нас в гості на просп. Лобановського, 119/2!
+        Тримаємо стрій!💙💛
+    </div>
+</div>
+
+<div class="wrapper">
+    <section class="shop-menu">
+        <div class="sm-topbar-wrapper">
+            <div class="sm-topbar">
+                <div class="topblock-left">
+                    <div class="topblock-left__row">
+                        <span>Студія дизайну і флористики</span>
+                        <a href="tel:+380672477971" class="topblock-phone">+380 (67) 111 11 11</a>
+                    </div>
+
+                </div>
+                <div class="topblock-right">
+                    <div class="cart">
+                        <a asp-action="Cart" class="cart-link">
+                            <span class="cart-wrap" id="cart-block">
+                                <svg width="18" height="18">
+                                    <path d="M17.75 4.6a1.45 1.45 0 0 0-1.2-.64H5.4L4.92 1.4C4.8.64 3.96 0 3.24 0H0v2.04h3.12l1.8 9.2c.12.76.96 1.4 1.68 1.4h7.55c.72 0 1.56-.51 1.8-1.28L17.87 6c.24-.51.12-1.02-.12-1.4zm-3.48 6.12H6.84l-.96-4.6h9.95l-1.56 4.6zm-6.95 3.2c-1.08 0-1.92.89-1.92 2.04S6.24 18 7.32 18c1.07 0 1.91-.9 1.91-2.04 0-1.15-.84-2.05-1.91-2.05zm6.71 0c-1.08 0-1.92.89-1.92 2.04S12.95 18 14.03 18s1.92-.9 1.92-2.04c0-1.15-.84-2.05-1.92-2.05z"
+                                          class="cart-ico"></path>
+                                </svg>
+                                <span class='cart-numbers' id="cart-count">0</span>
+                            </span>
+                            <span class="cart-text">Кошик</span>
+                        </a>
+                    </div>
+                    <div class="topblock-search js-topblock-container">
+                        <form method="get" asp-action="Search" class="search-top-form">
+                            <div class="search-top-form__inputs">
+                                <input name="q" type="text" value="">
+                                <input type="submit" value="ШУКАТИ">
+                            </div>
+                            <svg class="js-search-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </form>
+                        <button class="js-topblock-search">
+                            <svg width="18" height="18">
+                                <path d="M12 7.2a4.8 4.8 0 1 1-9.6 0 4.8 4.8 0 0 1 9.6 0zm1.43 4.32a7.36 7.36 0 1 0-1.89 1.9L16.1 18 18 16.11l-4.57-4.59z"
+                                      class="search-ico"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="shopmenu" class="shopmenu-wrap">
+            <a asp-action="Index" class="logo-shop">
+                <img src="~/img/logo.png" width="150" height="50" alt="logo" />
+            </a>
+            <div class="burger">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+            </div>
+            <div class="group-collapse">
+                <div class="group-collapse__inner">
+                    <div class="navtop-links">
+                    </div>
+
+                    <ul id="menu-main" class="shopmenu">
+                        <li class="l1-1-li shopmenu__dropdown js-shopmenu__dropdown" id="shopbuketyi"><a
+                                href="#" class="shopmenu__unit l1-1-a">
+                            Флористика
+                            <svg fill="#000000" height="18" viewBox="0 0 24 24" width="18"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="chevron-ico"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </a>
+                            <div class="dropdown-block">
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+                                        Колекції
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-eksklyuzivnaya-kollektsiya"><a class="dropdown-item__link"
+                                                                                    href="/shop-eksklyuzivnaya-kollektsiya/">
+                                            Ексклюзивні букети
+                                        </a></li>
+                                        <li id="shop-kollektsiya-roz"><a class="dropdown-item__link"
+                                                                         href="/shop-kollektsiya-roz/">
+                                            Троянди
+                                        </a></li>
+                                        <li id="shop-kollektsiya-tulpanov"><a class="dropdown-item__link"
+                                                                              href="/shop-kollektsiya-tulpanov/">
+                                            Тюльпани
+                                        </a></li>
+                                        <li id="shop-kollektsiya-gortenzey"><a class="dropdown-item__link"
+                                                                               href="/shop-kollektsiya-gortenzey/">
+                                            Гортензії
+                                        </a></li>
+                                        <li id="shop-kollektsiya-piony"><a class="dropdown-item__link"
+                                                                           href="/shop-kollektsiya-piony/">
+                                            Півонії
+                                        </a></li>
+                                        <li id="shop-v-vaze-1"><a class="dropdown-item__link"
+                                                                  href="/shop-v-vaze-1/">
+                                            Квіти в вазі
+                                        </a></li>
+                                        <li id="shop-v-shlyapnoj-korobke"><a class="dropdown-item__link"
+                                                                             href="/shop-v-shlyapnoj-korobke/">
+                                            Квіти в шляпній коробці
+                                        </a></li>
+                                        <li id="shop-kollektsiya-marrakesh"><a class="dropdown-item__link"
+                                                                               href="/shop-kollektsiya-marrakesh/">
+                                            Колекція "Марракеш"
+                                        </a></li>
+                                        <li id="shop-kolektsiya-bogini"><a class="dropdown-item__link"
+                                                                           href="/shop-kolektsiya-bogini/">
+                                            Колекція "Богині"
+                                        </a></li>
+                                        <li id="shop-kollektsiya-syhotsvetov"><a class="dropdown-item__link"
+                                                                                 href="/shop-kollektsiya-syhotsvetov/">
+                                            Сухоцвіти
+                                        </a></li>
+                                        <li id="podarunkovee-nabori"><a class="dropdown-item__link"
+                                                                        href="/podarunkovee-nabori/">
+                                            Подарункові набори
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+                                        Сезонні колекції
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-vesennyaya-kollektsiya"><a class="dropdown-item__link"
+                                                                                href="/shop-vesennyaya-kollektsiya/">
+                                            Весняна колекція
+                                        </a></li>
+                                        <li id="shop-letnyaya-kollektsiya"><a class="dropdown-item__link"
+                                                                              href="/shop-letnyaya-kollektsiya/">
+                                            Літня колекція
+                                        </a></li>
+                                        <li id="osennyaya-kollektsiya"><a class="dropdown-item__link"
+                                                                          href="/osennyaya-kollektsiya/">
+                                            Осіння колекція
+                                        </a></li>
+                                        <li id="shop-zimnyaya-kollektsiya"><a class="dropdown-item__link"
+                                                                              href="/shop-zimnyaya-kollektsiya/">
+                                            Зимова колекція
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+                                        Події
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-8-marta"><a class="dropdown-item__link"
+                                                                 href="/shop-8-marta/">
+                                            8 Березня
+                                        </a></li>
+                                        <li id="svadebniy-buket-neveste"><a class="dropdown-item__link"
+                                                                            href="/svadebniy-buket-neveste/">
+                                            Весільні букети
+                                        </a></li>
+                                        <li id="shop-den-materi"><a class="dropdown-item__link"
+                                                                    href="/shop-den-materi/">
+                                            День матері
+                                        </a></li>
+                                        <li id="shop-pasha"><a class="dropdown-item__link"
+                                                               href="/shop-pasha/">
+                                            Великдень
+                                        </a></li>
+                                        <li id="pozdravlenie-ychitelya"><a class="dropdown-item__link"
+                                                                           href="/pozdravlenie-ychitelya/">
+                                            Привітання вчителя
+                                        </a></li>
+                                        <li id="shop-halloween"><a class="dropdown-item__link"
+                                                                   href="/shop-halloween/">
+                                            Halloween
+                                        </a></li>
+                                        <li id="shop-den-vlyublennyih"><a class="dropdown-item__link"
+                                                                          href="/shop-den-vlyublennyih/">
+                                            День закоханих
+                                        </a></li>
+                                        <li id="shop-etno-kollektsiya"><a class="dropdown-item__link"
+                                                                          href="/shop-etno-kollektsiya/">
+                                            Етно колекція
+                                        </a></li>
+                                        <li id="shop-rityalnaya-kollektsiya"><a class="dropdown-item__link"
+                                                                                href="/shop-rityalnaya-kollektsiya/">
+                                            Ритуальна колекція
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+                                        Кому
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-jenskaya-kollektsiya"><a class="dropdown-item__link"
+                                                                              href="/shop-jenskaya-kollektsiya/">
+                                            Жінці
+                                        </a></li>
+                                        <li id="shop-muzhskaya-kollektsiya"><a class="dropdown-item__link"
+                                                                               href="/shop-muzhskaya-kollektsiya/">
+                                            Чоловіку
+                                        </a></li>
+                                        <li id="shop-detskaya-kollektsiya"><a class="dropdown-item__link"
+                                                                              href="/shop-detskaya-kollektsiya/">
+                                            Дитині
+                                        </a></li>
+                                        <li id="shop-biznes-kollektsiya"><a class="dropdown-item__link"
+                                                                            href="/shop-biznes-kollektsiya/">
+                                            Керівнику
+                                        </a></li>
+                                        <li id="shop-svadebnaya-kollekciya"><a class="dropdown-item__link"
+                                                                               href="/shop-svadebnaya-kollekciya/">
+                                            Нареченій
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <a href="/shopbuketyi/" class="dropdown-block-all">Усі Товари</a>
+                            </div>
+                        </li>
+                        <li class="l2-2-li shopmenu__dropdown js-shopmenu__dropdown" id="shop-keramika"><a
+                                href="/shop/#" class="shopmenu__unit l2-2-a">
+
+                            Кераміка власного виробництва
+
+                            <svg fill="#000000" height="18" viewBox="0 0 24 24" width="18"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="chevron-ico"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </a>
+                            <div class="dropdown-block">
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Maria Prymachenko Foundation
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-keramikamaria-prymachenko-family-foundationsadi-mareey"><a
+                                                class="dropdown-item__link"
+                                                href="/shop-keramikamaria-prymachenko-family-foundationsadi-mareey/">
+
+                                            Вази "Сади Марії"
+
+                                        </a></li>
+                                        <li id="shop-keramikamaria-prymachenko-family-foundationkerameechnee-kulee"><a
+                                                class="dropdown-item__link"
+                                                href="/shop-keramikamaria-prymachenko-family-foundationkerameechnee-kulee/">
+
+                                            Розписні кулі "Звіро крут"
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Декор для дому та квітів
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-kollektsiya-animal-land"><a class="dropdown-item__link"
+                                                                                 href="/shop-kollektsiya-animal-land/">
+
+                                            Колекція Animal Land
+
+                                        </a></li>
+                                        <li id="shop-orkhideynitsa"><a class="dropdown-item__link"
+                                                                       href="/shop-orkhideynitsa/">
+
+                                            Орхідейниці
+
+                                        </a></li>
+                                        <li id="shop-kollektsiya-kashpo"><a class="dropdown-item__link"
+                                                                            href="/shop-kollektsiya-kashpo/">
+
+                                            Колекція кашпо
+
+                                        </a></li>
+                                        <li id="shop-kollektsiya-listikov"><a class="dropdown-item__link"
+                                                                              href="/shop-kollektsiya-listikov/">
+
+                                            Колекція листочків
+
+                                        </a></li>
+                                        <li id="shop-kollektsiya-kandelyabrov"><a class="dropdown-item__link"
+                                                                                  href="/shop-kollektsiya-kandelyabrov/">
+
+                                            Колекція канделябрів
+
+                                        </a></li>
+                                        <li id="shop-kollektsia-tukv"><a class="dropdown-item__link"
+                                                                         href="/shop-kollektsia-tukv/">
+
+                                            Колекція гарбузів
+
+                                        </a></li>
+                                        <li id="shop-kollektsiya-sobak"><a class="dropdown-item__link"
+                                                                           href="/shop-kollektsiya-sobak/">
+
+                                            Колекція собак
+
+                                        </a></li>
+                                        <li id="shop-kollektsiya-torsherov"><a class="dropdown-item__link"
+                                                                               href="/shop-kollektsiya-torsherov/">
+
+                                            Колекція торшерів
+
+                                        </a></li>
+                                        <li id="shop-keramika-sobstvennoe-proizvodstvokolektseeya-shkatulok"><a
+                                                class="dropdown-item__link"
+                                                href="/shop-keramika-sobstvennoe-proizvodstvokolektseeya-shkatulok/">
+
+                                            Колекція шкатулок
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Гардероб ваз
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-garderob-vazvaza-nordic-ivy"><a class="dropdown-item__link"
+                                                                                     href="/shop-garderob-vazvaza-nordic-ivy/">
+
+                                            Ваза "Nordic Ivy"
+
+                                        </a></li>
+                                        <li id="shop-garderob-vazvaza-spirit"><a class="dropdown-item__link"
+                                                                                 href="/shop-garderob-vazvaza-spirit/">
+
+                                            Ваза "Touch"
+
+                                        </a></li>
+                                        <li id="shop-vaza-botanical-touch"><a class="dropdown-item__link"
+                                                                              href="/shop-vaza-botanical-touch/">
+
+                                            Ваза "Botanical touch"
+
+                                        </a></li>
+                                        <li id="shop-vaza-lunnaya-spiral"><a class="dropdown-item__link"
+                                                                             href="/shop-vaza-lunnaya-spiral/">
+
+                                            Ваза "Місячна спіраль"
+
+                                        </a></li>
+                                        <li id="shop-vaza-yaponskiy-stil"><a class="dropdown-item__link"
+                                                                             href="/shop-vaza-yaponskiy-stil/">
+
+                                            Ваза "Японський стиль"
+
+                                        </a></li>
+                                        <li id="shop-vaza-serdtse"><a class="dropdown-item__link"
+                                                                      href="/shop-vaza-serdtse/">
+
+                                            Ваза "Серце"
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        До свят
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-paskhalnaya-kollektsiya"><a class="dropdown-item__link"
+                                                                                 href="/shop-paskhalnaya-kollektsiya/">
+
+                                            Великодній декор
+
+                                        </a></li>
+                                        <li id="shop-raspisnue-yijtsa"><a class="dropdown-item__link"
+                                                                          href="/shop-raspisnue-yijtsa/">
+
+                                            Розписні яйця
+
+                                        </a></li>
+                                        <li id="shop-black-friday"><a class="dropdown-item__link"
+                                                                      href="/shop-black-friday/">
+
+                                            Black Friday
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <a href="/shop-keramika/" class="dropdown-block-all">Усі Товари</a>
+                            </div>
+                        </li>
+                        <li class="l2-3-li shopmenu__dropdown js-shopmenu__dropdown" id="shop-podarky"><a
+                                href="/shop/#" class="shopmenu__unit l2-3-a">
+
+                            Подарунки
+
+                            <svg fill="#000000" height="18" viewBox="0 0 24 24" width="18"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="chevron-ico"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </a>
+                            <div class="dropdown-block">
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Універсальні
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-zontu-pasotti"><a class="dropdown-item__link"
+                                                                       href="/shop-zontu-pasotti/">
+
+                                            Парасолі Pasotti
+
+                                        </a></li>
+                                        <li id="shop-zontu-pasottilopatki-dlya-vzuttya-pasotti"><a
+                                                class="dropdown-item__link"
+                                                href="/shop-zontu-pasottilopatki-dlya-vzuttya-pasotti/">
+
+                                            Лопатки для взуття Pasotti
+
+                                        </a></li>
+                                        <li id="shop-svechi"><a class="dropdown-item__link"
+                                                                href="/shop-svechi/">
+
+                                            Свічки
+
+                                        </a></li>
+                                        <li id="shop-myagkie-igrushki"><a class="dropdown-item__link"
+                                                                          href="/shop-myagkie-igrushki/">
+
+                                            М'які іграшки
+
+                                        </a></li>
+                                        <li id="shop-sladosti"><a class="dropdown-item__link"
+                                                                  href="/shop-sladosti/">
+
+                                            Солодощі
+
+                                        </a></li>
+                                        <li id="shop-knigi"><a class="dropdown-item__link"
+                                                               href="/shop-knigi/">
+
+                                            Книги
+
+                                        </a></li>
+                                        <li id="shop-podarky-otkrutki"><a class="dropdown-item__link"
+                                                                          href="/shop-podarky-otkrutki/">
+
+                                            Листівки
+
+                                        </a></li>
+                                        <li id="shop-podarky-vozdyshnue-sharu"><a class="dropdown-item__link"
+                                                                                  href="/shop-podarky-vozdyshnue-sharu/">
+
+                                            Повітряні кулі
+
+                                        </a></li>
+                                        <li id="shop-podarky-sertifikatu"><a class="dropdown-item__link"
+                                                                             href="/shop-podarky-sertifikatu/">
+
+                                            Подарункові сертифікати
+
+                                        </a></li>
+                                        <li id="shop-giree-grudi"><a class="dropdown-item__link"
+                                                                     href="/shop-giree-grudi/">
+
+                                            Гирі "Груди"
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Декор
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-podarkyvazyi"><a class="dropdown-item__link"
+                                                                      href="/shop-podarkyvazyi/">
+
+                                            Гардероб ваз
+
+                                        </a></li>
+                                        <li id="shop-podarky-statyetki"><a class="dropdown-item__link"
+                                                                           href="/shop-podarky-statyetki/">
+
+                                            Статуетки
+
+                                        </a></li>
+                                        <li id="shop-podarky-shkatulki"><a class="dropdown-item__link"
+                                                                           href="/shop-podarky-shkatulki/">
+
+                                            Скриньки
+
+                                        </a></li>
+                                        <li id="shop-podarky-svetilniki"><a class="dropdown-item__link"
+                                                                            href="/shop-podarky-svetilniki/">
+
+                                            Світильники
+
+                                        </a></li>
+                                        <li id="shop-podarky-podsvechniki"><a class="dropdown-item__link"
+                                                                              href="/shop-podarky-podsvechniki/">
+
+                                            Підсвічники
+
+                                        </a></li>
+                                        <li id="shop-podarky-blyuda"><a class="dropdown-item__link"
+                                                                        href="/shop-podarky-blyuda/">
+
+                                            Блюда
+
+                                        </a></li>
+                                        <li id="shop-podarky-roombox"><a class="dropdown-item__link"
+                                                                         href="/shop-podarky-roombox/">
+
+                                            RoomBox
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Аромати
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-zhidkie-diffuzoru"><a class="dropdown-item__link"
+                                                                           href="/shop-zhidkie-diffuzoru/">
+
+                                            Рідкі дифузори
+
+                                        </a></li>
+                                        <li id="shop-avto-diffuzoru"><a class="dropdown-item__link"
+                                                                        href="/shop-avto-diffuzoru/">
+
+                                            Авто дифузори
+
+                                        </a></li>
+                                        <li id="shop-aroma-brelki"><a class="dropdown-item__link"
+                                                                      href="/shop-aroma-brelki/">
+
+                                            Арома брелки
+
+                                        </a></li>
+                                        <li id="shop-elektro-diffuzoru"><a class="dropdown-item__link"
+                                                                           href="/shop-elektro-diffuzoru/">
+
+                                            Електро дифузори
+
+                                        </a></li>
+                                        <li id="shop-aroma-masla"><a class="dropdown-item__link"
+                                                                     href="/shop-aroma-masla/">
+
+                                            Арома масла
+
+                                        </a></li>
+                                        <li id="shop-aroma-kapsylu"><a class="dropdown-item__link"
+                                                                       href="/shop-aroma-kapsylu/">
+
+                                            Арома капсули
+
+                                        </a></li>
+                                        <li id="shop-sprei-dlya-doma"><a class="dropdown-item__link"
+                                                                         href="/shop-sprei-dlya-doma/">
+
+                                            Спреї для будинку
+
+                                        </a></li>
+                                        <li id="shop-sashe"><a class="dropdown-item__link"
+                                                               href="/shop-sashe/">
+
+                                            Саше
+
+                                        </a></li>
+                                        <li id="shop-aromatuaroma-sveechki"><a class="dropdown-item__link"
+                                                                               href="/shop-aromatuaroma-sveechki/">
+
+                                            Арома свічки
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <a href="/shop-podarky/" class="dropdown-block-all">Усі Товари</a>
+                            </div>
+                        </li>
+                        <li class="l2-4-li shopmenu__dropdown js-shopmenu__dropdown" id="shop-rasteniya"><a
+                                href="/shop/#" class="shopmenu__unit l2-4-a">
+
+                            Рослини
+
+                            <svg fill="#000000" height="18" viewBox="0 0 24 24" width="18"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="chevron-ico"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </a>
+                            <div class="dropdown-block">
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Види квітів
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-orkhidei"><a class="dropdown-item__link"
+                                                                  href="/shop-orkhidei/">
+
+                                            Орхідеї
+
+                                        </a></li>
+                                        <li id="shop-komnatnue-rasteniya"><a class="dropdown-item__link"
+                                                                             href="/shop-komnatnue-rasteniya/">
+
+                                            Кімнатні рослини
+
+                                        </a></li>
+                                        <li id="shop-vusadki-iz-sykkylentov"><a class="dropdown-item__link"
+                                                                                href="/shop-vusadki-iz-sykkylentov/">
+
+                                            Висадки з сукулентів
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Декор для квітів
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-kashpo-dla-rasteniy"><a class="dropdown-item__link"
+                                                                             href="/shop-kashpo-dla-rasteniy/">
+
+                                            Кашпо для рослин
+
+                                        </a></li>
+                                        <li id="shop-makrame"><a class="dropdown-item__link"
+                                                                 href="/shop-makrame/">
+
+                                            Макраме
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <a href="/shop-rasteniya/" class="dropdown-block-all">Усі Товари</a>
+                            </div>
+                        </li>
+                        <li class="l2-5-li shopmenu__dropdown js-shopmenu__dropdown" id="shop-new-year-collection"><a
+                                href="/shop/#" class="shopmenu__unit l2-5-a">
+
+                            Новорічна колекція
+
+                            <svg fill="#000000" height="18" viewBox="0 0 24 24" width="18"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="chevron-ico"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </a>
+                            <div class="dropdown-block">
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Колекції
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-zimnyaya-floristika"><a class="dropdown-item__link"
+                                                                             href="/shop-zimnyaya-floristika/">
+
+                                            Зимова флористика
+
+                                        </a></li>
+                                        <li id="shop-raspisnue-sharu-rychnoy-rabotu"><a class="dropdown-item__link"
+                                                                                        href="/shop-raspisnue-sharu-rychnoy-rabotu/">
+
+                                            Новорічні кульки
+
+                                        </a></li>
+                                        <li id="shop-simvol-goda"><a class="dropdown-item__link"
+                                                                     href="/shop-simvol-goda/">
+
+                                            Символ року
+
+                                        </a></li>
+                                        <li id="shop-rojdestvenskie-venki-i-kompozicii"><a class="dropdown-item__link"
+                                                                                           href="/shop-rojdestvenskie-venki-i-kompozicii/">
+
+                                            Різдвяні віночки та композиції
+
+                                        </a></li>
+                                        <li id="shop-zimnie-rasteniya"><a class="dropdown-item__link"
+                                                                          href="/shop-zimnie-rasteniya/">
+
+                                            Зимові рослини
+
+                                        </a></li>
+                                        <li id="shop-novogodniy-dekor"><a class="dropdown-item__link"
+                                                                          href="/shop-novogodniy-dekor/">
+
+                                            Новорічний декор
+
+                                        </a></li>
+                                        <li id="shop-novogodnie-podarki"><a class="dropdown-item__link"
+                                                                            href="/shop-novogodnie-podarki/">
+
+                                            Новорічні подарунки
+
+                                        </a></li>
+                                        <li id="shop-upakovka-podarkov"><a class="dropdown-item__link"
+                                                                           href="/shop-upakovka-podarkov/">
+
+                                            Упаковка подарунків
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-item__header">
+
+                                        Новорічна кераміка
+
+                                    </div>
+                                    <ul class="dropdown-item__list">
+                                        <li id="shop-schelkynchik"><a class="dropdown-item__link"
+                                                                      href="/shop-schelkynchik/">
+
+                                            Лускунчик
+
+                                        </a></li>
+                                        <li id="shop-vechera-na-xytore-bliz-dikanku"><a class="dropdown-item__link"
+                                                                                        href="/shop-vechera-na-xytore-bliz-dikanku/">
+
+                                            Вечора на хуторі біля Диканьки
+
+                                        </a></li>
+                                        <li id="shop-mifu-drevney-grecii"><a class="dropdown-item__link"
+                                                                             href="/shop-mifu-drevney-grecii/">
+
+                                            Міфи Древньої Греції
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <a href="/shop-new-year-collection/" class="dropdown-block-all">Усі
+                                    Товари</a></div>
+                        </li>
+                    </ul>
+                    <ul id="menu-main" class="shopmenu mobile--show--only">
+                        <li class="l1-11-li shopmenu__dropdown js-shopmenu__dropdown" id="informatsiya"><a
+                                href="/shop/#" class="shopmenu__unit l1-11-a">
+
+                            Інформація
+
+                            <svg fill="#000000" height="18" viewBox="0 0 24 24" width="18"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="chevron-ico"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </a>
+                            <div class="dropdown-block">
+                                <div class="dropdown-item">
+                                    <ul class="dropdown-item__list">
+                                        <li id="oplata"><a class="dropdown-item__link"
+                                                           href="/oplata/">
+
+                                            Оплата
+
+                                        </a></li>
+                                        <li id="dostavka"><a class="dropdown-item__link"
+                                                             href="/dostavka/">
+
+                                            Доставка та тарифи
+
+                                        </a></li>
+                                        <li id="garantii"><a class="dropdown-item__link"
+                                                             href="/garantii/">
+
+                                            Гарантії
+
+                                        </a></li>
+                                        <li id="programma-loyalnosti"><a class="dropdown-item__link"
+                                                                         href="/programma-loyalnosti/">
+
+                                            Програма лояльності
+
+                                        </a></li>
+                                        <li id="reklamatsii"><a class="dropdown-item__link"
+                                                                href="/reklamatsii/">
+
+                                            Рекламації
+
+                                        </a></li>
+                                        <li id="zamena-tsvetov"><a class="dropdown-item__link"
+                                                                   href="/zamena-tsvetov/">
+
+                                            Заміна квітів
+
+                                        </a></li>
+                                        <li id="zamena-i-vozvrat-tovara-vozvrat-deneg"><a class="dropdown-item__link"
+                                                                                          href="/zamena-i-vozvrat-tovara-vozvrat-deneg/">
+
+                                            Заміна та повернення товару. Повернення грошей
+
+                                        </a></li>
+                                        <li id="problemnue-sityatsii"><a class="dropdown-item__link"
+                                                                         href="/problemnue-sityatsii/">
+
+                                            Проблемні ситуації
+
+                                        </a></li>
+                                        <li id="politika-konfidentsialnosti"><a class="dropdown-item__link"
+                                                                                href="/politika-konfidentsialnosti/">
+
+                                            Політика конфіденційності
+
+                                        </a></li>
+                                        <li id="dogovor-publichnoj-ofertu"><a class="dropdown-item__link"
+                                                                              href="/dogovor-publichnoj-ofertu/">
+
+                                            Договір публічної оферти
+
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    @RenderBody()
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-nav">
+
+            <div class="footer-navblock js-footer-navblock"><h4 class="footer-navblock__header">Про компанію</h4>
+                <ul>
+                    <li class="footer-navblock__navlink"><a href="/about/">Про компанію</a></li>
+                    <li class="footer-navblock__navlink"><a href="/contact/">Контакти</a></li>
+                    <li class="footer-navblock__navlink"><a href="/shops/">Магазини</a></li>
+                    <li class="footer-navblock__navlink"><a href="/kliyenty/">Клієнти</a></li>
+                    <li class="footer-navblock__navlink"><a href="/carera/">Кар'єра</a></li>
+                </ul>
+            </div>
+            <div class="footer-navblock js-footer-navblock"><h4 class="footer-navblock__header">Новини</h4>
+                <ul>
+                    <li class="footer-navblock__navlink"><a href="/eko-vidpovidalnist/">Еко
+                        відповідальність</a></li>
+                    <li class="footer-navblock__navlink"><a href="/novosti-statji-blog/">Новини.
+                        Статті. Блог</a></li>
+                    <li class="footer-navblock__navlink"><a
+                            href="/rekomendasii-po-yhody-za-tsvetami/">Рекомендації щодо догляду за
+                        квітами</a></li>
+                </ul>
+            </div>
+            <div class="footer-navblock js-footer-navblock"><h4 class="footer-navblock__header">Інформація</h4>
+                <ul>
+                    <li class="footer-navblock__navlink"><a href="/shop/oplata/">Оплата</a></li>
+                    <li class="footer-navblock__navlink"><a href="/shop/dostavka/">Доставка та
+                        тарифи</a></li>
+                    <li class="footer-navblock__navlink"><a href="/garantii/">Гарантії</a></li>
+                    <li class="footer-navblock__navlink"><a href="/programma-loyalnosti/">Програма
+                        лояльності</a></li>
+                    <li class="footer-navblock__navlink"><a href="/reklamatsii/">Рекламації</a></li>
+                    <li class="footer-navblock__navlink"><a href="/zamena-tsvetov/">Заміна квітів</a>
+                    </li>
+                    <li class="footer-navblock__navlink"><a
+                            href="/zamena-i-vozvrat-tovara-vozvrat-deneg/">Заміна та повернення
+                        товару. Повернення грошей</a></li>
+                    <li class="footer-navblock__navlink"><a href="/problemnue-sityatsii/">Проблемні
+                        ситуації</a></li>
+                    <li class="footer-navblock__navlink"><a href="/politika-konfidentsialnosti/">Політика
+                        конфіденційності</a></li>
+                    <li class="footer-navblock__navlink"><a href="/dogovor-publichnoj-ofertu/">Договір
+                        публічної оферти</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-media">
+            <h4 class="footer-media__title">
+                Лілея в соціальних мережах
+            </h4>
+
+            <div class="footer-media__links">
+                <a href="https://www.instagram.com/" rel="nofollow" class="footer-media__icon"
+                   data-icon="instagram"></a>
+                <a href="https://www.facebook.com/" rel="nofollow" class="footer-media__icon"
+                   data-icon="facebook"></a>
+                <a href="https://www.pinterest.com/" rel="nofollow" class="footer-media__icon"
+                   data-icon="pinterest"></a>
+                <a href="https://www.youtube.com/user/" rel="nofollow" class="footer-media__icon"
+                   data-icon="youtube"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="~/js/jquery-3.2.1.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/owl.carousel.min.js"></script>
+<script src="~/js/lorashen.js"></script>
+<script src="~/js/jquery-ui.min.js"></script>
+<script defer="" src="~/js/sweetalert2@11.js"></script>
+<div class="hidden"></div>
+</body>
+@await RenderSectionAsync("Scripts", required: false)
+<script type="text/javascript" async="" src="~/js/f.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+            let cart = localStorage.getItem('cart')
+            if (cart) {
+                cart = JSON.parse(cart)
+                document.getElementById("cart-count").innerText = cart.totalQuantity || 0
+            }
+        })
+
+    function removeFromCart(cart, prodInCart) {
+        cart.moneyAmount -= prodInCart.price * prodInCart.qty
+        cart.totalQuantity -= prodInCart.qty
+        cart.products = cart.products.filter(x => x.id !== prodInCart.id)
+        document.getElementById("cart-count").innerText = cart.totalQuantity || 0
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }
+
+    function addToCart(cart, product) {
+        cart.moneyAmount += product.price
+        cart.totalQuantity += 1
+        cart.products.push(product)
+        document.getElementById("cart-count").innerText = cart.totalQuantity || 0
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }
+</script>
+</html>

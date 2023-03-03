@@ -1,0 +1,5297 @@
+@charset "UTF-8";
+/* line 1, theme/lorashen/static/sass/partial/_general.sass */
+html, body {
+  font-family: "Comfortaa", cursive;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5; }
+  @media only screen and (min-width : 768px) {
+    /* line 1, theme/lorashen/static/sass/partial/_general.sass */
+    html, body {
+      font-size: 16px; } }
+/* line 8, theme/lorashen/static/sass/partial/_general.sass */
+.wrapper {
+  min-height: calc(100vh - 201px); }
+
+/* line 11, theme/lorashen/static/sass/partial/_general.sass */
+h1 {
+  margin: 0;
+  font-size: 1.5rem; }
+  @media only screen and (min-width : 768px) {
+    /* line 11, theme/lorashen/static/sass/partial/_general.sass */
+    h1 {
+      font-size: 1.6rem; } }
+/* line 17, theme/lorashen/static/sass/partial/_general.sass */
+h2 {
+  margin: 0;
+  font-size: 1.275rem; }
+  @media only screen and (min-width : 768px) {
+    /* line 17, theme/lorashen/static/sass/partial/_general.sass */
+    h2 {
+      font-size: 1.375rem; } }
+/* line 23, theme/lorashen/static/sass/partial/_general.sass */
+h3 {
+  margin: 0;
+  font-size: 1.15rem; }
+  @media only screen and (min-width : 768px) {
+    /* line 23, theme/lorashen/static/sass/partial/_general.sass */
+    h3 {
+      font-size: 1.25rem; } }
+/* line 28, theme/lorashen/static/sass/partial/_general.sass */
+a {
+  display: inline-block; }
+  /* line 30, theme/lorashen/static/sass/partial/_general.sass */
+  a:hover, a:focus {
+    text-decoration: none; }
+
+/* line 34, theme/lorashen/static/sass/partial/_general.sass */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 39, theme/lorashen/static/sass/partial/_general.sass */
+.fnt-content {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
+
+/* line 43, theme/lorashen/static/sass/partial/_general.sass */
+.content--left {
+  text-align: left; }
+  /* line 46, theme/lorashen/static/sass/partial/_general.sass */
+  .content--left--style ul {
+    list-style: initial;
+    padding: inherit; }
+
+/* line 50, theme/lorashen/static/sass/partial/_general.sass */
+.btn-standard {
+  display: inline-flex;
+  height: 1.75rem;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out; }
+  /* line 56, theme/lorashen/static/sass/partial/_vars.sass */
+  .btn-standard:focus, .btn-standard:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #926a36;
+    border: 1px solid #926a36;
+    text-decoration: none; }
+
+/* line 53, theme/lorashen/static/sass/partial/_general.sass */
+.btn-standard-light {
+  display: inline-flex;
+  height: 1.75rem;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out; }
+  /* line 78, theme/lorashen/static/sass/partial/_vars.sass */
+  .btn-standard-light:focus, .btn-standard-light:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #926a36;
+    border: 1px solid #926a36;
+    text-decoration: none; }
+
+/* line 94, theme/lorashen/static/sass/partial/_general.sass */
+.fotorama__nav {
+  text-align: left !important; }
+
+/* line 97, theme/lorashen/static/sass/partial/_general.sass */
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s ease; }
+
+/* line 110, theme/lorashen/static/sass/partial/_general.sass */
+.modal-container {
+  position: relative;
+  width: 280px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all .3s ease;
+  backface-visibility: hidden; }
+  @media only screen and (min-width : 480px) {
+    /* line 110, theme/lorashen/static/sass/partial/_general.sass */
+    .modal-container {
+      width: 460px; } }
+/* line 123, theme/lorashen/static/sass/partial/_general.sass */
+.modal-body {
+  margin: 20px 0; }
+
+/* line 126, theme/lorashen/static/sass/partial/_general.sass */
+.modal-default-button {
+  float: right; }
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+/* line 138, theme/lorashen/static/sass/partial/_general.sass */
+.modal-enter {
+  opacity: 0; }
+
+/* line 141, theme/lorashen/static/sass/partial/_general.sass */
+.modal-leave-active {
+  opacity: 0; }
+
+/* line 145, theme/lorashen/static/sass/partial/_general.sass */
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  transform: scale(1.1); }
+
+/* line 149, theme/lorashen/static/sass/partial/_general.sass */
+.modal-close-button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer; }
+  /* line 156, theme/lorashen/static/sass/partial/_general.sass */
+  .modal-close-button:before, .modal-close-button:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333333;
+    transition: background-color .3s ease-in-out;
+    position: absolute;
+    top: 13px;
+    left: 4px; }
+  /* line 167, theme/lorashen/static/sass/partial/_general.sass */
+  .modal-close-button:before {
+    transform: rotate(45deg); }
+  /* line 169, theme/lorashen/static/sass/partial/_general.sass */
+  .modal-close-button:after {
+    transform: rotate(-45deg); }
+  /* line 172, theme/lorashen/static/sass/partial/_general.sass */
+  .modal-close-button:hover:before, .modal-close-button:hover:after {
+    background-color: #da4453; }
+
+/* line 176, theme/lorashen/static/sass/partial/_general.sass */
+.action-type {
+  color: #da4453;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute;
+  top: 15px;
+  left: 30px; }
+
+/* line 186, theme/lorashen/static/sass/partial/_general.sass */
+button {
+  outline: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible; }
+
+/* line 195, theme/lorashen/static/sass/partial/_general.sass */
+.form-submit {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  background-color: #000000;
+  color: #ffffff;
+  transition: all .3s ease-in-out; }
+  /* line 205, theme/lorashen/static/sass/partial/_general.sass */
+  .form-submit:hover, .form-submit:focus {
+    background-color: #926a36; }
+
+/* line 210, theme/lorashen/static/sass/partial/_general.sass */
+.form-workshop h3 {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  color: #926a36;
+  text-transform: uppercase; }
+
+/* line 215, theme/lorashen/static/sass/partial/_general.sass */
+.form-workshop__content {
+  margin-bottom: 30px; }
+
+/* line 221, theme/lorashen/static/sass/partial/_general.sass */
+.input-wrapper {
+  display: flex;
+  flex-direction: column; }
+  /* line 224, theme/lorashen/static/sass/partial/_general.sass */
+  .input-wrapper:not(:last-of-type) {
+    margin-bottom: 20px; }
+  /* line 226, theme/lorashen/static/sass/partial/_general.sass */
+  .input-wrapper label {
+    font-size: 0.75rem;
+    text-transform: uppercase; }
+  /* line 229, theme/lorashen/static/sass/partial/_general.sass */
+  .input-wrapper input {
+    border: 1px solid #cecece;
+    padding: 5px 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: .875rem;
+    font-weight: 300;
+    color: #000000; }
+    /* line 236, theme/lorashen/static/sass/partial/_general.sass */
+    .input-wrapper input:focus {
+      outline: none;
+      border-color: #926a36; }
+
+/* line 242, theme/lorashen/static/sass/partial/_general.sass */
+.product-card {
+  margin-bottom: 2.5rem; }
+
+@media only screen and (max-width: 1199px) {
+  /* line 245, theme/lorashen/static/sass/partial/_general.sass */
+  .zoomContainer {
+    display: none !important; } }
+
+/* line 250, theme/lorashen/static/sass/partial/_general.sass */
+.hportfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem; }
+  /* line 254, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio__title {
+    padding: 10px 15px;
+    text-transform: uppercase; }
+    /* line 260, theme/lorashen/static/sass/partial/_general.sass */
+    .hportfolio__title.text-center {
+      text-align: center; }
+  /* line 262, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio__description {
+    padding: 10px 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300; }
+  /* line 270, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio__shop {
+    padding: 10px 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #000000;
+    transition: all .2s ease-in-out; }
+    /* line 277, theme/lorashen/static/sass/partial/_general.sass */
+    .hportfolio__shop:hover, .hportfolio__shop:focus {
+      color: #926a36; }
+  /* line 280, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio__shop_btn_light {
+    display: table !important;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 5px !important;
+    display: inline-flex;
+    height: 1.75rem;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out; }
+    /* line 78, theme/lorashen/static/sass/partial/_vars.sass */
+    .hportfolio__shop_btn_light:focus, .hportfolio__shop_btn_light:hover {
+      cursor: pointer;
+      color: #ffffff;
+      background-color: #926a36;
+      border: 1px solid #926a36;
+      text-decoration: none; }
+
+/* line 287, theme/lorashen/static/sass/partial/_general.sass */
+.hportfolio-slider {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  position: relative; }
+  /* line 292, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio-slider__item {
+    display: inline-block;
+    min-height: 600px;
+    max-height: 600px;
+    float: left; }
+    /* line 297, theme/lorashen/static/sass/partial/_general.sass */
+    .hportfolio-slider__item img {
+      width: auto;
+      height: 100%;
+      border-right: 1px solid white;
+      border-left: 1px solid white; }
+  /* line 303, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio-slider .slick-prev,
+  .hportfolio-slider .slick-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%) translateZ(0px);
+    position: absolute;
+    top: 50%;
+    z-index: 100; }
+  /* line 317, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio-slider .slick-prev {
+    left: 0; }
+  /* line 319, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio-slider .slick-next {
+    right: 0; }
+  /* line 321, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio-slider .slick-track {
+    display: block;
+    max-height: 600px;
+    min-height: 600px; }
+  /* line 329, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio-slider .slick-slide img {
+    opacity: 0.2; }
+  /* line 332, theme/lorashen/static/sass/partial/_general.sass */
+  .hportfolio-slider .slick-slide.slick-active img {
+    opacity: 1; }
+
+/* line 335, theme/lorashen/static/sass/partial/_general.sass */
+.slider-wrapper {
+  margin-bottom: 30px; }
+  @media only screen and (min-width: 768px) {
+    /* line 335, theme/lorashen/static/sass/partial/_general.sass */
+    .slider-wrapper {
+      margin-bottom: 0; } }
+/* line 339, theme/lorashen/static/sass/partial/_general.sass */
+.ppslider {
+  max-width: 500px;
+  max-height: 500px;
+  overflow: hidden; }
+  /* line 345, theme/lorashen/static/sass/partial/_general.sass */
+  .ppslider__item img {
+    display: block;
+    width: 100%; }
+  /* line 349, theme/lorashen/static/sass/partial/_general.sass */
+  .ppslider .slick-track {
+    display: flex;
+    flex-wrap: nowrap; }
+
+/* line 353, theme/lorashen/static/sass/partial/_general.sass */
+.ppslider-nav {
+  max-width: 500px;
+  padding-top: 1px; }
+  /* line 357, theme/lorashen/static/sass/partial/_general.sass */
+  .ppslider-nav__item {
+    max-width: 125px;
+    max-height: 125px;
+    cursor: pointer; }
+    /* line 361, theme/lorashen/static/sass/partial/_general.sass */
+    .ppslider-nav__item img {
+      width: 100%;
+      outline: none; }
+  /* line 365, theme/lorashen/static/sass/partial/_general.sass */
+  .ppslider-nav .slick-track {
+    display: flex;
+    flex-wrap: nowrap;
+    transform: translate3d(0, 0, 0) !important; }
+  /* line 370, theme/lorashen/static/sass/partial/_general.sass */
+  .ppslider-nav .slick-slide:not(:last-of-type) {
+    margin-right: 1px; }
+  /* line 372, theme/lorashen/static/sass/partial/_general.sass */
+  .ppslider-nav .slick-slide:focus {
+    outline: none; }
+  /* line 374, theme/lorashen/static/sass/partial/_general.sass */
+  .ppslider-nav .slick-current {
+    position: relative;
+    outline: none; }
+    /* line 377, theme/lorashen/static/sass/partial/_general.sass */
+    .ppslider-nav .slick-current:after {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: #926a36;
+      position: absolute;
+      right: 0;
+      bottom: -3px;
+      left: 0; }
+
+/* line 388, theme/lorashen/static/sass/partial/_general.sass */
+.product {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px; }
+
+/* line 392, theme/lorashen/static/sass/partial/_general.sass */
+.product-header {
+  font-size: 1.28rem;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+/* line 398, theme/lorashen/static/sass/partial/_general.sass */
+.product-sku {
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000; }
+  /* line 404, theme/lorashen/static/sass/partial/_general.sass */
+  .product-sku span {
+    font-weight: 300; }
+
+/* line 407, theme/lorashen/static/sass/partial/_general.sass */
+.product-price {
+  margin-bottom: 20px;
+  font-size: 1.28rem;
+  font-weight: 700; }
+  /* line 412, theme/lorashen/static/sass/partial/_general.sass */
+  .product-price span {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300; }
+
+/* line 416, theme/lorashen/static/sass/partial/_general.sass */
+.product-stock {
+  margin-bottom: 15px;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 400; }
+  /* line 422, theme/lorashen/static/sass/partial/_general.sass */
+  .product-stock__title {
+    text-transform: uppercase; }
+  /* line 424, theme/lorashen/static/sass/partial/_general.sass */
+  .product-stock__city {
+    display: inline-flex;
+    margin-top: -2px;
+    padding-top: 3px;
+    margin-left: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: #000000;
+    font-weight: 500;
+    font-size: 0.875rem; }
+    /* line 434, theme/lorashen/static/sass/partial/_general.sass */
+    .product-stock__city:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      transform: translateY(-50%) translateZ(0px);
+      position: absolute;
+      top: 50%;
+      left: 5px; }
+  /* line 443, theme/lorashen/static/sass/partial/_general.sass */
+  .product-stock__city[data-stock="1"]:before {
+    background-color: #84bd00; }
+  /* line 445, theme/lorashen/static/sass/partial/_general.sass */
+  .product-stock__city[data-stock="0"]:before {
+    background-color: #d8d8d8; }
+
+/* line 447, theme/lorashen/static/sass/partial/_general.sass */
+.size-block-title {
+  text-transform: uppercase; }
+
+/* line 449, theme/lorashen/static/sass/partial/_general.sass */
+.size-block {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  /* line 456, theme/lorashen/static/sass/partial/_general.sass */
+  .size-block li:not(:last-of-type) {
+    margin-right: 15px; }
+  /* line 458, theme/lorashen/static/sass/partial/_general.sass */
+  .size-block__sizes {
+    display: inline-flex;
+    margin-right: 40px; }
+    @media only screen and (max-width: 768px) {
+      /* line 458, theme/lorashen/static/sass/partial/_general.sass */
+      .size-block__sizes {
+        margin-right: 20px; } }
+  /* line 463, theme/lorashen/static/sass/partial/_general.sass */
+  .size-block__size {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d8d8d8;
+    border-radius: 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #926a36; }
+    /* line 475, theme/lorashen/static/sass/partial/_general.sass */
+    .size-block__size:hover, .size-block__size:focus {
+      color: #84bd00;
+      border-color: #926a36; }
+    /* line 479, theme/lorashen/static/sass/partial/_general.sass */
+    .size-block__size.active {
+      font-weight: 400;
+      border-color: #926a36; }
+      /* line 482, theme/lorashen/static/sass/partial/_general.sass */
+      .size-block__size.active:hover, .size-block__size.active:focus {
+        font-weight: 400;
+        color: #926a36; }
+  /* line 486, theme/lorashen/static/sass/partial/_general.sass */
+  .size-block__info {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px; }
+    /* line 490, theme/lorashen/static/sass/partial/_general.sass */
+    .size-block__info .size-block__data {
+      font-family: "Roboto", sans-serif; }
+      /* line 492, theme/lorashen/static/sass/partial/_general.sass */
+      .size-block__info .size-block__data p {
+        margin: 0;
+        color: #000000;
+        font-weight: 500; }
+        /* line 496, theme/lorashen/static/sass/partial/_general.sass */
+        .size-block__info .size-block__data p span {
+          color: #000000;
+          font-weight: 500; }
+    /* line 499, theme/lorashen/static/sass/partial/_general.sass */
+    .size-block__info .size-block__data:not(:last-of-type) {
+      margin-right: 15px; }
+    @media only screen and (min-width: 402px) {
+      /* line 486, theme/lorashen/static/sass/partial/_general.sass */
+      .size-block__info {
+        flex-direction: column;
+        padding-top: 0; }
+        /* line 504, theme/lorashen/static/sass/partial/_general.sass */
+        .size-block__info .size-block__data:not(:last-of-type) {
+          margin-right: 0;
+          margin-bottom: 5px; } }
+    @media only screen and (min-width: 560px) {
+      /* line 486, theme/lorashen/static/sass/partial/_general.sass */
+      .size-block__info {
+        flex-direction: row; }
+        /* line 509, theme/lorashen/static/sass/partial/_general.sass */
+        .size-block__info .size-block__data:not(:last-of-type) {
+          margin-right: 15px;
+          margin-bottom: 0; } }
+    @media only screen and (min-width: 768px) {
+      /* line 486, theme/lorashen/static/sass/partial/_general.sass */
+      .size-block__info {
+        flex-direction: row;
+        padding-top: 20px; }
+        /* line 515, theme/lorashen/static/sass/partial/_general.sass */
+        .size-block__info .size-block__data:not(:last-of-type) {
+          margin-right: 15px;
+          margin-bottom: 0; } }
+    @media only screen and (min-width: 992px) {
+      /* line 486, theme/lorashen/static/sass/partial/_general.sass */
+      .size-block__info {
+        flex-direction: column;
+        padding-top: 0; }
+        /* line 521, theme/lorashen/static/sass/partial/_general.sass */
+        .size-block__info .size-block__data:not(:last-of-type) {
+          margin-bottom: 5px; } }
+    @media only screen and (min-width: 1200px) {
+      /* line 486, theme/lorashen/static/sass/partial/_general.sass */
+      .size-block__info {
+        flex-direction: row; }
+        /* line 525, theme/lorashen/static/sass/partial/_general.sass */
+        .size-block__info .size-block__data:not(:last-of-type) {
+          margin-right: 15px;
+          margin-bottom: 0; } }
+  /* line 528, theme/lorashen/static/sass/partial/_general.sass */
+  .size-block__data {
+    display: inline-flex;
+    font-size: 0.875rem;
+    font-weight: 400; }
+    /* line 533, theme/lorashen/static/sass/partial/_general.sass */
+    .size-block__data > img {
+      display: inline-flex;
+      margin-right: 10px; }
+
+/* line 538, theme/lorashen/static/sass/partial/_general.sass */
+.card-block {
+  margin-bottom: 20px; }
+  /* line 540, theme/lorashen/static/sass/partial/_general.sass */
+  .card-block__title {
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 5px; }
+    /* line 544, theme/lorashen/static/sass/partial/_general.sass */
+    .card-block__title span {
+      color: #84bd00;
+      font-weight: 400; }
+  /* line 549, theme/lorashen/static/sass/partial/_general.sass */
+  .card-block__text textarea {
+    width: 100%;
+    resize: none;
+    border: 1px solid #a0a0a0;
+    color: #242729;
+    font-size: 0.875rem;
+    font-weight: 300; }
+
+/* line 557, theme/lorashen/static/sass/partial/_general.sass */
+.action-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 20px; }
+  /* line 562, theme/lorashen/static/sass/partial/_general.sass */
+  .action-block > button {
+    margin-right: 20px; }
+  /* line 564, theme/lorashen/static/sass/partial/_general.sass */
+  .action-block > button,
+  .action-block > form {
+    margin-bottom: 10px; }
+
+/* line 568, theme/lorashen/static/sass/partial/_general.sass */
+.other-info-block {
+  display: flex;
+  margin-bottom: 20px; }
+  /* line 571, theme/lorashen/static/sass/partial/_general.sass */
+  .other-info-block__sub {
+    width: 50%;
+    padding-right: 15px; }
+    /* line 574, theme/lorashen/static/sass/partial/_general.sass */
+    .other-info-block__sub p {
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 0; }
+    /* line 578, theme/lorashen/static/sass/partial/_general.sass */
+    .other-info-block__sub span {
+      font-size: 0.875rem;
+      font-weight: 300; }
+    /* line 582, theme/lorashen/static/sass/partial/_general.sass */
+    .other-info-block__sub__details a {
+      width: 100%;
+      color: #000000;
+      font-weight: 500; }
+    /* line 586, theme/lorashen/static/sass/partial/_general.sass */
+    .other-info-block__sub__details a:focus,
+    .other-info-block__sub__details a:hover {
+      color: #926a36;
+      text-decoration: none; }
+
+/* line 592, theme/lorashen/static/sass/partial/_general.sass */
+.product-quick {
+  font-family: "Roboto", sans-serif; }
+  /* line 594, theme/lorashen/static/sass/partial/_general.sass */
+  .product-quick__header {
+    font-size: 0.875rem;
+    font-weight: 300; }
+  /* line 597, theme/lorashen/static/sass/partial/_general.sass */
+  .product-quick__phone {
+    display: flex; }
+    /* line 599, theme/lorashen/static/sass/partial/_general.sass */
+    .product-quick__phone input {
+      height: 2.25rem; }
+
+/* line 602, theme/lorashen/static/sass/partial/_general.sass */
+.attention-block {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #999999; }
+  /* line 608, theme/lorashen/static/sass/partial/_general.sass */
+  .attention-block sup {
+    color: #ff0000; }
+  /* line 610, theme/lorashen/static/sass/partial/_general.sass */
+  .attention-block span {
+    font-weight: 500; }
+
+/* line 612, theme/lorashen/static/sass/partial/_general.sass */
+.p-tabs {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px; }
+  /* line 615, theme/lorashen/static/sass/partial/_general.sass */
+  .p-tabs__caption {
+    display: inline-flex;
+    padding-bottom: 10px; }
+    /* line 618, theme/lorashen/static/sass/partial/_general.sass */
+    .p-tabs__caption li {
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      border-bottom: 2px solid transparent; }
+      /* line 624, theme/lorashen/static/sass/partial/_general.sass */
+      .p-tabs__caption li.active {
+        border-bottom: 2px solid #926a36; }
+    /* line 626, theme/lorashen/static/sass/partial/_general.sass */
+    .p-tabs__caption li:not(:last-of-type) {
+      margin-right: 15px; }
+  /* line 629, theme/lorashen/static/sass/partial/_general.sass */
+  .p-tabs__content {
+    display: none;
+    font-size: 0.875rem;
+    font-weight: 300; }
+    /* line 633, theme/lorashen/static/sass/partial/_general.sass */
+    .p-tabs__content.active {
+      display: block; }
+
+/* line 636, theme/lorashen/static/sass/partial/_general.sass */
+.p-info {
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  display: flex; }
+
+/* line 641, theme/lorashen/static/sass/partial/_general.sass */
+.infoblock {
+  width: 240px;
+  padding-right: 15px; }
+  /* line 644, theme/lorashen/static/sass/partial/_general.sass */
+  .infoblock__header {
+    font-size: 1rem;
+    font-weight: bold; }
+  /* line 647, theme/lorashen/static/sass/partial/_general.sass */
+  .infoblock__content {
+    font-size: 0.875rem;
+    font-weight: 300; }
+  /* line 650, theme/lorashen/static/sass/partial/_general.sass */
+  .infoblock__img {
+    width: 51px;
+    height: 31px;
+    display: inline-block; }
+  /* line 654, theme/lorashen/static/sass/partial/_general.sass */
+  .infoblock__img--visa {
+    background: url("/static/img/sprite-ico-ls.png") 0px -72px; }
+  /* line 656, theme/lorashen/static/sass/partial/_general.sass */
+  .infoblock__img--master {
+    background: url("/static/img/sprite-ico-ls.png") -51px -72px; }
+  /* line 659, theme/lorashen/static/sass/partial/_general.sass */
+  .infoblock__link {
+    color: #000000;
+    font-size: 0.875rem; }
+    /* line 662, theme/lorashen/static/sass/partial/_general.sass */
+    .infoblock__link:hover, .infoblock__link:focus {
+      color: #926a36;
+      text-decoration: none; }
+
+/* line 668, theme/lorashen/static/sass/partial/_general.sass */
+.product-upsale {
+  margin-bottom: 2.5rem; }
+  /* line 670, theme/lorashen/static/sass/partial/_general.sass */
+  .product-upsale__header {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px; }
+
+/* line 678, theme/lorashen/static/sass/partial/_general.sass */
+.upsale-slider .owl-stage-outer {
+  overflow: hidden; }
+
+/* line 680, theme/lorashen/static/sass/partial/_general.sass */
+.upsale-slider .owl-stage {
+  display: flex; }
+
+/* line 682, theme/lorashen/static/sass/partial/_general.sass */
+.upsale-slider .owl-prev,
+.upsale-slider .owl-next {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  color: #ffffff;
+  position: absolute;
+  top: 40%; }
+
+/* line 697, theme/lorashen/static/sass/partial/_general.sass */
+.upsale-slider .owl-prev {
+  left: 10px; }
+
+/* line 699, theme/lorashen/static/sass/partial/_general.sass */
+.upsale-slider .owl-next {
+  right: 10px; }
+
+/* line 702, theme/lorashen/static/sass/partial/_general.sass */
+.upsale-slider__block {
+  display: block;
+  margin: 0 auto;
+  max-width: 260px;
+  min-width: 260px; }
+  /* line 707, theme/lorashen/static/sass/partial/_general.sass */
+  .upsale-slider__block .card-item__top {
+    width: 100%;
+    max-height: 260px;
+    min-height: 260px; }
+  /* line 711, theme/lorashen/static/sass/partial/_general.sass */
+  .upsale-slider__block .card-item__detail {
+    padding: 0 0.5rem; }
+
+/* line 716, theme/lorashen/static/sass/partial/_general.sass */
+.error404 {
+  padding: 0 0 4rem 0; }
+  /* line 718, theme/lorashen/static/sass/partial/_general.sass */
+  .error404 hr {
+    margin-bottom: 6rem; }
+  /* line 720, theme/lorashen/static/sass/partial/_general.sass */
+  .error404__header {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem; }
+    /* line 724, theme/lorashen/static/sass/partial/_general.sass */
+    .error404__header span {
+      font-size: 1.5rem; }
+  /* line 726, theme/lorashen/static/sass/partial/_general.sass */
+  .error404__description {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    width: 280px;
+    margin: 0 auto 2rem auto;
+    font-weight: 300;
+    border-bottom: 1px solid #d8d8d8;
+    text-align: center;
+    padding-bottom: 2rem; }
+    @media only screen and (min-width: 480px) {
+      /* line 726, theme/lorashen/static/sass/partial/_general.sass */
+      .error404__description {
+        font-size: 1rem;
+        width: 450px; } }
+  /* line 738, theme/lorashen/static/sass/partial/_general.sass */
+  .error404__action {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem; }
+    /* line 744, theme/lorashen/static/sass/partial/_general.sass */
+    .error404__action > a {
+      margin: 0 auto; }
+
+/* line 750, theme/lorashen/static/sass/partial/_general.sass */
+.filterbar {
+  width: 280px;
+  background-color: #ffffff;
+  border-right: 1px solid #926a36;
+  font-family: "Roboto", sans-serif;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -280px;
+  transition: left .5s ease-in-out;
+  z-index: 10000; }
+  /* line 761, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar--open {
+    left: 0px; }
+  /* line 763, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar__inner {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    bottom: 100px;
+    left: 10px;
+    overflow-y: auto; }
+  /* line 773, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar__header {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: #fafafa;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 20px; }
+  /* line 783, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar__title {
+    color: #000000;
+    text-transform: uppercase; }
+  /* line 786, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar__close {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8d8d8;
+    font-size: 2rem;
+    line-height: 1;
+    color: #333333;
+    cursor: pointer;
+    transition: all .2s ease-in-out; }
+    /* line 798, theme/lorashen/static/sass/partial/_general.sass */
+    .filterbar__close:hover {
+      color: #da4453; }
+  /* line 800, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar .btn-standard {
+    backface-visibility: hidden;
+    transform: translate3d(-50%, 0, 0);
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% + 0.5px); }
+
+/* line 807, theme/lorashen/static/sass/partial/_general.sass */
+.filter-block {
+  width: 100%; }
+  /* line 809, theme/lorashen/static/sass/partial/_general.sass */
+  .filter-block:not(:last-of-type) {
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 1366px) {
+      /* line 809, theme/lorashen/static/sass/partial/_general.sass */
+      .filter-block:not(:last-of-type) {
+        margin-bottom: 25px; } }
+/* line 814, theme/lorashen/static/sass/partial/_general.sass */
+.filter-block__title {
+  font-size: 0.875rem;
+  margin-bottom: 10px; }
+
+/* line 818, theme/lorashen/static/sass/partial/_general.sass */
+.filter-block__item {
+  position: relative; }
+  /* line 821, theme/lorashen/static/sass/partial/_general.sass */
+  .filter-block__item input {
+    position: absolute;
+    left: -99999px; }
+    /* line 827, theme/lorashen/static/sass/partial/_general.sass */
+    .filter-block__item input:checked + label:after {
+      content: '\00D7';
+      transform: translateY(-50%) translateZ(0px);
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      font-size: 24px;
+      color: #926a36;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      line-height: 0.5; }
+  /* line 838, theme/lorashen/static/sass/partial/_general.sass */
+  .filter-block__item label {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 30px;
+    min-height: 2rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #3c4144;
+    line-height: 1.25;
+    background-color: #fafafa; }
+    @media only screen and (min-width: 1366px) {
+      /* line 838, theme/lorashen/static/sass/partial/_general.sass */
+      .filter-block__item label {
+        background-color: #ffffff;
+        padding: 0 5px 0 30px; } }
+    /* line 853, theme/lorashen/static/sass/partial/_general.sass */
+    .filter-block__item label:before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #3c4144;
+      transform: translateY(-50%) translateZ(0px);
+      position: absolute;
+      top: 50%;
+      left: 5px; }
+  /* line 863, theme/lorashen/static/sass/partial/_general.sass */
+  .filter-block__item:not(:last-of-type) {
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 1366px) {
+      /* line 863, theme/lorashen/static/sass/partial/_general.sass */
+      .filter-block__item:not(:last-of-type) {
+        margin-bottom: 5px; } }
+/* line 868, theme/lorashen/static/sass/partial/_general.sass */
+.filterbar-action {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer; }
+  /* line 873, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar-action:hover .filter-icon {
+    fill: #926a36; }
+  /* line 875, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar-action__icon {
+    display: flex;
+    align-items: center;
+    margin-right: 5px; }
+    /* line 879, theme/lorashen/static/sass/partial/_general.sass */
+    .filterbar-action__icon .filter-icon {
+      fill: #333333;
+      transition: fill .2s ease-in-out; }
+  /* line 882, theme/lorashen/static/sass/partial/_general.sass */
+  .filterbar-action__text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: inline-flex;
+    flex-wrap: wrap; }
+
+/* line 890, theme/lorashen/static/sass/partial/_general.sass */
+.filters-selected {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase; }
+
+/* line 897, theme/lorashen/static/sass/partial/_general.sass */
+.filters-selected__title {
+  color: #000000; }
+
+/* line 899, theme/lorashen/static/sass/partial/_general.sass */
+.filters-selected__list {
+  display: flex;
+  flex-wrap: wrap; }
+  /* line 902, theme/lorashen/static/sass/partial/_general.sass */
+  .filters-selected__list li {
+    display: inline-flex;
+    align-items: center; }
+  /* line 905, theme/lorashen/static/sass/partial/_general.sass */
+  .filters-selected__list li:not(:last-of-type) {
+    padding-right: 10px; }
+
+/* line 907, theme/lorashen/static/sass/partial/_general.sass */
+.filters-selected__reset {
+  background-color: #242729;
+  color: #ffffff;
+  font-size: 0.7rem;
+  text-transform: uppercase; }
+  /* line 914, theme/lorashen/static/sass/partial/_general.sass */
+  .filters-selected__reset:hover, .filters-selected__reset:focus {
+    background-color: #926a36; }
+
+/* line 920, theme/lorashen/static/sass/partial/_general.sass */
+.sortbar {
+  font-family: "Roboto", sans-serif;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 1rem; }
+  /* line 929, theme/lorashen/static/sass/partial/_general.sass */
+  .sortbar__inner {
+    display: inline-flex;
+    align-items: center; }
+  /* line 932, theme/lorashen/static/sass/partial/_general.sass */
+  .sortbar__title {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-right: 10px; }
+    /* line 938, theme/lorashen/static/sass/partial/_general.sass */
+    .sortbar__title .sorting-ico {
+      fill: #333333; }
+    @media only screen and (min-width : 768px) {
+      /* line 941, theme/lorashen/static/sass/partial/_general.sass */
+      .sortbar__title svg {
+        display: none; } }
+    /* line 943, theme/lorashen/static/sass/partial/_general.sass */
+    .sortbar__title span {
+      display: none;
+      color: #000000; }
+      @media only screen and (min-width : 768px) {
+        /* line 943, theme/lorashen/static/sass/partial/_general.sass */
+        .sortbar__title span {
+          display: inline-block; } }
+  /* line 948, theme/lorashen/static/sass/partial/_general.sass */
+  .sortbar__item {
+    font-size: 0.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #333333; }
+    /* line 953, theme/lorashen/static/sass/partial/_general.sass */
+    .sortbar__item.active {
+      color: #926a36;
+      text-decoration: underline; }
+    /* line 956, theme/lorashen/static/sass/partial/_general.sass */
+    .sortbar__item:hover, .sortbar__item:focus {
+      outline: 0;
+      color: #926a36; }
+    /* line 960, theme/lorashen/static/sass/partial/_general.sass */
+    .sortbar__item:not(:last-of-type) {
+      margin-right: 10px; }
+
+/* line 965, theme/lorashen/static/sass/partial/_general.sass */
+.cards-list {
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr; }
+  @media only screen and (min-width: 560px) {
+    /* line 965, theme/lorashen/static/sass/partial/_general.sass */
+    .cards-list {
+      grid-template-columns: repeat(2, minmax(220px, 1fr)); } }
+  @media only screen and (min-width : 992px) {
+    /* line 965, theme/lorashen/static/sass/partial/_general.sass */
+    .cards-list {
+      grid-template-columns: repeat(3, minmax(256px, 1fr)); } }
+/* line 976, theme/lorashen/static/sass/partial/_general.sass */
+.card-slot {
+  display: flex;
+  margin: 0 auto;
+  width: 100%; }
+
+/* line 981, theme/lorashen/static/sass/partial/_general.sass */
+.no-card-slot {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  font-size: 18px; }
+
+/* line 991, theme/lorashen/static/sass/partial/_general.sass */
+.card-item {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background-color: #fafafa; }
+  /* line 998, theme/lorashen/static/sass/partial/_general.sass */
+  .card-item__top {
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+    /* line 1004, theme/lorashen/static/sass/partial/_general.sass */
+    .card-item__top img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity .2s ease-in-out; }
+    /* line 1011, theme/lorashen/static/sass/partial/_general.sass */
+    .card-item__top:hover img {
+      opacity: 0; }
+  /* line 1014, theme/lorashen/static/sass/partial/_general.sass */
+  .card-item__title {
+    min-height: 3rem;
+    max-height: 3rem;
+    padding: 0.5rem 10px 0 10px;
+    font-size: 1rem;
+    line-height: 1.1;
+    position: relative; }
+  /* line 1021, theme/lorashen/static/sass/partial/_general.sass */
+  .card-item__sku {
+    margin-right: 5px;
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 0.75rem;
+    background-color: #926a36;
+    color: #ffffff;
+    position: relative;
+    top: -2px; }
+  /* line 1030, theme/lorashen/static/sass/partial/_general.sass */
+  .card-item__bottom {
+    width: 100%;
+    height: 3rem;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  /* line 1040, theme/lorashen/static/sass/partial/_general.sass */
+  .card-item__price {
+    font-size: 1.5rem; }
+    /* line 1042, theme/lorashen/static/sass/partial/_general.sass */
+    .card-item__price > span {
+      font-size: 1rem;
+      padding-left: 5px; }
+  /* line 1045, theme/lorashen/static/sass/partial/_general.sass */
+  .card-item__detail {
+    display: inline-flex;
+    padding: 0 1rem;
+    height: 1.875rem;
+    align-items: center;
+    border: 1px solid #926a36;
+    color: #926a36;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out; }
+    /* line 1056, theme/lorashen/static/sass/partial/_general.sass */
+    .card-item__detail:hover, .card-item__detail:focus {
+      outline: 0;
+      background-color: #926a36;
+      color: #ffffff; }
+
+/* line 1062, theme/lorashen/static/sass/partial/_general.sass */
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 4rem; }
+  /* line 1069, theme/lorashen/static/sass/partial/_general.sass */
+  .pagination li {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    padding: 2px; }
+    /* line 1075, theme/lorashen/static/sass/partial/_general.sass */
+    .pagination li > a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #926a36;
+      color: #926a36; }
+  /* line 1083, theme/lorashen/static/sass/partial/_general.sass */
+  .pagination li.active > a {
+    background-color: #926a36;
+    color: #ffffff; }
+  /* line 1087, theme/lorashen/static/sass/partial/_general.sass */
+  .pagination li.disabled > a {
+    border: 1px solid #cccccc;
+    color: #cccccc; }
+  /* line 1090, theme/lorashen/static/sass/partial/_general.sass */
+  .pagination li.page-info {
+    width: auto;
+    padding: 0 10px;
+    align-items: center; }
+
+/* line 1097, theme/lorashen/static/sass/partial/_general.sass */
+.checkout-pay {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/* line 1102, theme/lorashen/static/sass/partial/_general.sass */
+.proceed-to-pay {
+  display: inline-flex;
+  background-color: #00a395;
+  padding: 10px 25px;
+  border: none;
+  box-shadow: 2px 5px 10px 0 rgba(0, 0, 0, 0.12);
+  font-size: 0.875rem;
+  color: #ffffff;
+  transition: all .2s ease-in-out; }
+  /* line 1111, theme/lorashen/static/sass/partial/_general.sass */
+  .proceed-to-pay:hover {
+    background-color: #008a7e;
+    color: #ffffff; }
+  /* line 1114, theme/lorashen/static/sass/partial/_general.sass */
+  .proceed-to-pay:focus {
+    outline: 0;
+    background-color: #008a7e;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.12);
+    color: #ffffff; }
+
+/* line 1120, theme/lorashen/static/sass/partial/_general.sass */
+.notice-wrap {
+  width: 100%;
+  padding: 0 15px;
+  background-color: #da4453; }
+  @media only screen and (min-width: 992px) {
+    /* line 1120, theme/lorashen/static/sass/partial/_general.sass */
+    .notice-wrap {
+      height: 46px;
+      overflow: hidden; } }
+/* line 1127, theme/lorashen/static/sass/partial/_general.sass */
+.notice-bar {
+  min-height: 44px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025rem; }
+
+/* line 1, theme/lorashen/static/sass/partial/_helpers.sass */
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+
+/* line 6, theme/lorashen/static/sass/partial/_helpers.sass */
+.no-padding {
+  padding-right: 0;
+  padding-left: 0; }
+
+/* line 10, theme/lorashen/static/sass/partial/_helpers.sass */
+.alert-block {
+  position: relative;
+  min-height: 45px;
+  padding: 5px 10px 5px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1;
+  border-left: 3px solid #da4453; }
+  /* line 22, theme/lorashen/static/sass/partial/_helpers.sass */
+  .alert-block:before {
+    content: '!';
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #da4453;
+    transform: translateX(-11px) translateY(-50%) translateZ(0px);
+    position: absolute;
+    top: 50%;
+    left: 0; }
+
+/* line 40, theme/lorashen/static/sass/partial/_helpers.sass */
+.invalid-name {
+  display: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  color: #da4453;
+  text-transform: uppercase; }
+
+/* line 47, theme/lorashen/static/sass/partial/_helpers.sass */
+.is-invalid {
+  border-color: #da4453; }
+
+/* line 50, theme/lorashen/static/sass/partial/_helpers.sass */
+.is-invalid + .invalid-name {
+  display: block; }
+
+/* line 54, theme/lorashen/static/sass/partial/_helpers.sass */
+.ls-checkbox {
+  display: inline-flex;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 300; }
+  /* line 60, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-checkbox input {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden; }
+  /* line 64, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-checkbox label {
+    padding: 5px 10px 5px 30px;
+    position: relative;
+    cursor: pointer; }
+  /* line 68, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-checkbox label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #d8d8d8;
+    transform: translateY(-50%) translateZ(0px);
+    position: absolute;
+    left: 5px;
+    top: 48%; }
+  /* line 77, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-checkbox input:checked + label:after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #00a395;
+    transform: translateY(-50%) translateZ(0px);
+    position: absolute;
+    left: 7px;
+    top: 48%; }
+
+/* line 91, theme/lorashen/static/sass/partial/_helpers.sass */
+.ls-radio {
+  display: inline-flex;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 300; }
+  /* line 97, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-radio input {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden; }
+  /* line 101, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-radio label {
+    padding: 5px 10px 5px 30px;
+    position: relative;
+    cursor: pointer; }
+  /* line 105, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-radio label:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #d8d8d8;
+    border-radius: 50%;
+    transform: translateY(-50%) translateZ(0px);
+    position: absolute;
+    left: 5px;
+    top: 50%; }
+  /* line 116, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-radio input:checked + label:after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #00a395;
+    transform: translateY(-50%) translateZ(0px);
+    position: absolute;
+    left: 7px;
+    top: 50%; }
+
+/* line 128, theme/lorashen/static/sass/partial/_helpers.sass */
+.ls-time {
+  width: 50px;
+  height: 25px;
+  padding-top: 15px;
+  display: inline-flex;
+  position: relative; }
+  /* line 134, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-time input {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden; }
+  /* line 138, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-time label {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0; }
+  /* line 148, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-time input + label:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #00a395;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    cursor: pointer; }
+  /* line 158, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-time input:disabled + label {
+    cursor: default; }
+  /* line 160, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-time input:disabled + label:before {
+    background-color: #999999;
+    cursor: default; }
+  /* line 163, theme/lorashen/static/sass/partial/_helpers.sass */
+  .ls-time input:checked + label:before {
+    background-color: #da4453;
+    cursor: pointer; }
+
+/* line 167, theme/lorashen/static/sass/partial/_helpers.sass */
+.coming-soon {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #999999;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1;
+  text-transform: uppercase; }
+
+/* line 1, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn {
+  display: inline-block;
+  padding: 7px 14px;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #926a36;
+  border: 1px solid #926a36;
+  transition: all .2s ease-in-out; }
+  /* line 12, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn:hover, .btn:focus {
+    color: #6d4f28;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px 0px rgba(100, 100, 100, 0.5); }
+
+/* line 19, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn--accent:hover, .btn--accent:focus {
+  color: #ffffff;
+  border-color: #da4453;
+  background-color: #da4453; }
+
+/* line 24, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn--shop {
+  padding: 5px 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid transparent; }
+  /* line 32, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--shop:hover, .btn--shop:focus {
+    color: #000000;
+    border-bottom: 1px solid #926a36;
+    box-shadow: none; }
+
+/* line 40, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn--shop-highlighted {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #c41324;
+  border: 1px solid #c41324;
+  line-height: 1;
+  text-align: center;
+  align-items: center; }
+  @media only screen and (min-width: 992px) {
+    /* line 40, theme/lorashen/static/sass/partial/_buttons.sass */
+    .btn--shop-highlighted {
+      min-width: 170px; } }
+  /* line 51, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--shop-highlighted:hover, .btn--shop-highlighted:focus {
+    color: #ffffff;
+    background-color: #960e1b;
+    border-bottom: 1px solid #c41324;
+    box-shadow: none; }
+
+/* line 59, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn--corporate-site {
+  margin-right: 0;
+  line-height: 1.2; }
+  @media only screen and (min-width: 992px) {
+    /* line 59, theme/lorashen/static/sass/partial/_buttons.sass */
+    .btn--corporate-site {
+      margin-right: 10px; } }
+/* line 65, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn--retail {
+  padding: 5px 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid transparent; }
+  /* line 73, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--retail:hover, .btn--retail:focus {
+    color: #000000;
+    border-bottom: 1px solid #926a36;
+    box-shadow: none; }
+
+/* line 81, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn--language {
+  padding: 5px;
+  font-size: 0.75rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #f9f9f9;
+  color: #000000;
+  transition: all .2s ease-in-out; }
+  /* line 91, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--language:hover, .btn--language:focus {
+    box-shadow: none;
+    border-bottom-color: #926a36; }
+  /* line 95, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--language.active--language {
+    color: #926a36;
+    border-bottom-color: #926a36; }
+
+/* line 101, theme/lorashen/static/sass/partial/_buttons.sass */
+.active > .btn--language {
+  color: #926a36;
+  border-bottom-color: #926a36; }
+
+/* line 116, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn--shops-top {
+  min-height: 31px;
+  min-width: 40px;
+  border: none;
+  position: absolute;
+  top: 10px;
+  left: 15px; }
+  @media only screen and (min-width: 480px) {
+    /* line 116, theme/lorashen/static/sass/partial/_buttons.sass */
+    .btn--shops-top {
+      transform: translateY(-80%);
+      left: 0;
+      top: 70%; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 116, theme/lorashen/static/sass/partial/_buttons.sass */
+    .btn--shops-top {
+      top: 44%; } }
+  /* line 129, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--shops-top:hover, .btn--shops-top:focus {
+    color: #da4453;
+    border: none;
+    box-shadow: none; }
+
+/* line 134, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn--phone-top {
+  min-height: 31px;
+  min-width: 40px;
+  border-color: transparent;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 15px; }
+  @media only screen and (min-width: 480px) {
+    /* line 134, theme/lorashen/static/sass/partial/_buttons.sass */
+    .btn--phone-top {
+      background-color: transparent;
+      font-weight: 400;
+      color: #926a36;
+      border-color: transparent;
+      left: 0; }
+      /* line 151, theme/lorashen/static/sass/partial/_buttons.sass */
+      .btn--phone-top:hover, .btn--phone-top:focus {
+        color: #da4453;
+        border-color: transparent; }
+      /* line 156, theme/lorashen/static/sass/partial/_buttons.sass */
+      .btn--phone-top .phone-top__ico {
+        display: none; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 134, theme/lorashen/static/sass/partial/_buttons.sass */
+    .btn--phone-top {
+      transform: none;
+      font-size: 0.875rem;
+      font-weight: 300;
+      top: 40px; } }
+  /* line 167, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--phone-top:hover, .btn--phone-top:focus {
+    box-shadow: none; }
+  /* line 170, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--phone-top > .phone-top__ico {
+    width: 24px;
+    fill: #84bd00;
+    transform: translateX(-50%) translateY(-50%) translateZ(0px);
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+  /* line 178, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn--phone-top > span {
+    display: none; }
+    @media only screen and (min-width: 480px) {
+      /* line 178, theme/lorashen/static/sass/partial/_buttons.sass */
+      .btn--phone-top > span {
+        display: inline-block; } }
+/* line 183, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn-ws {
+  padding: 5px 20px;
+  font-size: 0.875rem;
+  color: #ffffff;
+  background-color: #242729;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out; }
+  /* line 192, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn-ws:focus, .btn-ws:hover {
+    color: #ffffff;
+    background-color: #3c4144;
+    box-shadow: 1px 1px 2px 0px rgba(100, 100, 100, 0.5); }
+
+/* line 199, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn-map {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 10px;
+  background-color: #84bd00;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #ffffff;
+  position: absolute;
+  right: 40px;
+  bottom: 10px; }
+  /* line 211, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn-map .show-map {
+    display: inline-block; }
+  /* line 213, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn-map .hide-map {
+    display: none; }
+  /* line 217, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn-map--show .show-map {
+    display: none; }
+  /* line 219, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn-map--show .hide-map {
+    display: inline-block; }
+
+/* line 222, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn-xl {
+  height: 2.25rem;
+  padding: 0 1.5rem;
+  font-weight: 400;
+  font-size: 0.875rem; }
+
+/* line 228, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn-main-flx {
+  display: inline-flex;
+  align-items: center;
+  height: 1.625rem;
+  padding: 0 20px;
+  font-size: 0.875rem;
+  color: #ffffff;
+  background-color: #242729;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 0px rgba(100, 100, 100, 0.5);
+  transition: all .2s ease-in-out;
+  border: none; }
+  /* line 240, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn-main-flx:focus, .btn-main-flx:hover {
+    outline: 0;
+    color: #ffffff;
+    background-color: #00a395;
+    box-shadow: 0px 0px 0px 0px rgba(100, 100, 100, 0.5); }
+
+/* line 247, theme/lorashen/static/sass/partial/_buttons.sass */
+.btn-main-flx-brd {
+  display: inline-flex;
+  align-items: center;
+  height: 1.625rem;
+  padding: 0 20px;
+  font-size: 0.875rem;
+  color: #242729;
+  background-color: #ffffff;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 0px rgba(100, 100, 100, 0.5);
+  transition: all .2s ease-in-out; }
+  /* line 259, theme/lorashen/static/sass/partial/_buttons.sass */
+  .btn-main-flx-brd:focus, .btn-main-flx-brd:hover {
+    color: #242729;
+    border: 1px solid #00a395;
+    box-shadow: 0px 0px 0px 0px rgba(100, 100, 100, 0.5); }
+
+/* line 2, theme/lorashen/static/sass/partial/_menu.sass */
+.ls-corp-menu {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1024px) {
+    /* line 2, theme/lorashen/static/sass/partial/_menu.sass */
+    .ls-corp-menu {
+      padding-top: 10px;
+      margin-bottom: 10px; } }
+/* line 10, theme/lorashen/static/sass/partial/_menu.sass */
+.nav-top {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; }
+  @media only screen and (min-width : 992px) {
+    /* line 10, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-top {
+      padding-bottom: 30px; } }
+/* line 21, theme/lorashen/static/sass/partial/_menu.sass */
+.nav-wrap {
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 70px;
+  flex-wrap: wrap; }
+  @media only screen and (min-width : 768px) {
+    /* line 21, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-wrap {
+      max-width: 750px;
+      padding-right: 0;
+      padding-left: 0; } }
+  @media only screen and (min-width : 992px) {
+    /* line 21, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-wrap {
+      max-width: 970px; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 21, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-wrap {
+      min-height: 60px;
+      position: relative; } }
+  @media only screen and (min-width : 1200px) {
+    /* line 21, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-wrap {
+      max-width: 1170px; } }
+/* line 40, theme/lorashen/static/sass/partial/_menu.sass */
+.nav-top__moto {
+  padding: 7px 15px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  display: none; }
+  @media only screen and (min-width: 568px) {
+    /* line 40, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-top__moto {
+      display: block; } }
+/* line 51, theme/lorashen/static/sass/partial/_menu.sass */
+.header-logo {
+  display: inline-flex; }
+  /* line 53, theme/lorashen/static/sass/partial/_menu.sass */
+  .header-logo__top {
+    margin: 0px;
+    width: 140px;
+    position: relative; }
+    @media only screen and (min-width : 768px) {
+      /* line 53, theme/lorashen/static/sass/partial/_menu.sass */
+      .header-logo__top {
+        width: 180px; } }
+  /* line 59, theme/lorashen/static/sass/partial/_menu.sass */
+  .header-logo__main {
+    width: 100%;
+    height: auto;
+    display: inline-flex; }
+  /* line 63, theme/lorashen/static/sass/partial/_menu.sass */
+  .header-logo__hover {
+    width: 100%;
+    display: inline-flex;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 72, theme/lorashen/static/sass/partial/_menu.sass */
+  .header-logo:hover .header-logo__main, .header-logo:focus .header-logo__main {
+    opacity: 0; }
+  /* line 74, theme/lorashen/static/sass/partial/_menu.sass */
+  .header-logo:hover .header-logo__hover, .header-logo:focus .header-logo__hover {
+    opacity: 1; }
+
+/* line 78, theme/lorashen/static/sass/partial/_menu.sass */
+.burger {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%) translateZ(0px);
+  top: 50%;
+  right: 15px; }
+  @media only screen and (min-width: 1024px) {
+    /* line 78, theme/lorashen/static/sass/partial/_menu.sass */
+    .burger {
+      display: none; } }
+  /* line 88, theme/lorashen/static/sass/partial/_menu.sass */
+  .burger.burger-open {
+    position: fixed;
+    top: 65px;
+    right: 15px;
+    z-index: 11000; }
+
+/* line 93, theme/lorashen/static/sass/partial/_menu.sass */
+.burger-bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #926a36;
+  position: relative;
+  transition: all .3s ease-in-out; }
+  /* line 100, theme/lorashen/static/sass/partial/_menu.sass */
+  .burger-bar:not(:last-of-type) {
+    margin-bottom: 4px; }
+
+/* line 103, theme/lorashen/static/sass/partial/_menu.sass */
+.burger-open .burger-bar:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 6px; }
+
+/* line 106, theme/lorashen/static/sass/partial/_menu.sass */
+.burger-open .burger-bar:nth-of-type(2) {
+  opacity: 0; }
+
+/* line 108, theme/lorashen/static/sass/partial/_menu.sass */
+.burger-open .burger-bar:nth-of-type(3) {
+  transform: rotate(135deg);
+  top: -6px; }
+
+/* line 114, theme/lorashen/static/sass/partial/_menu.sass */
+.nav-collapse {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #ffffff;
+  transition: left .3s ease-in-out;
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: -100%;
+  z-index: 10000; }
+  @media only screen and (min-width: 768px) {
+    /* line 114, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-collapse {
+      top: 0px; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 114, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-collapse {
+      position: static;
+      width: 100%;
+      z-index: auto;
+      background-color: #ffffff;
+      border-top: none; } }
+  /* line 136, theme/lorashen/static/sass/partial/_menu.sass */
+  .nav-collapse.nav-collapse--open {
+    width: 100%;
+    opacity: 0.97;
+    left: 0; }
+    @media only screen and (min-width: 1024px) {
+      /* line 136, theme/lorashen/static/sass/partial/_menu.sass */
+      .nav-collapse.nav-collapse--open {
+        display: block;
+        position: static; } }
+/* line 144, theme/lorashen/static/sass/partial/_menu.sass */
+.nav-extended {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 10px; }
+  @media only screen and (min-width: 1024px) {
+    /* line 144, theme/lorashen/static/sass/partial/_menu.sass */
+    .nav-extended {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 0;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10009; } }
+  /* line 158, theme/lorashen/static/sass/partial/_menu.sass */
+  .nav-extended .btn--retail {
+    margin-right: 15px;
+    line-height: 1.25; }
+  /* line 161, theme/lorashen/static/sass/partial/_menu.sass */
+  .nav-extended .btn--shop {
+    line-height: 1.25; }
+  /* line 163, theme/lorashen/static/sass/partial/_menu.sass */
+  .nav-extended > a {
+    margin-bottom: 6px; }
+    @media only screen and (min-width: 1024px) {
+      /* line 163, theme/lorashen/static/sass/partial/_menu.sass */
+      .nav-extended > a {
+        margin-bottom: 0; } }
+/* line 168, theme/lorashen/static/sass/partial/_menu.sass */
+.language-panel {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  list-style: none; }
+  @media only screen and (min-width: 1024px) {
+    /* line 168, theme/lorashen/static/sass/partial/_menu.sass */
+    .language-panel {
+      display: inline-flex;
+      justify-content: flex-start;
+      width: auto;
+      margin-left: 20px; } }
+  /* line 180, theme/lorashen/static/sass/partial/_menu.sass */
+  .language-panel li:not(:last-of-type) {
+    margin-right: 2px; }
+
+/* line 183, theme/lorashen/static/sass/partial/_menu.sass */
+.menu-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0 10px;
+  margin-top: 0px; }
+  @media only screen and (min-width: 1024px) {
+    /* line 183, theme/lorashen/static/sass/partial/_menu.sass */
+    .menu-nav {
+      flex-direction: row;
+      backface-visibility: hidden;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      padding: 0 15px; } }
+  /* line 199, theme/lorashen/static/sass/partial/_menu.sass */
+  .menu-nav li {
+    padding: 0 10px; }
+    @media only screen and (min-width: 1024px) {
+      /* line 199, theme/lorashen/static/sass/partial/_menu.sass */
+      .menu-nav li {
+        padding: 0; } }
+/* line 203, theme/lorashen/static/sass/partial/_menu.sass */
+.menu-unit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 72%;
+  height: 50px;
+  background-color: #3c4144;
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 568px) {
+    /* line 203, theme/lorashen/static/sass/partial/_menu.sass */
+    .menu-unit {
+      width: 32%;
+      height: 65px; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 203, theme/lorashen/static/sass/partial/_menu.sass */
+    .menu-unit {
+      width: auto;
+      height: auto;
+      margin-bottom: 0;
+      background-color: transparent; } }
+  /* line 219, theme/lorashen/static/sass/partial/_menu.sass */
+  .menu-unit:hover {
+    background-color: #926a36; }
+    @media only screen and (min-width: 1024px) {
+      /* line 219, theme/lorashen/static/sass/partial/_menu.sass */
+      .menu-unit:hover {
+        background-color: transparent; } }
+/* line 224, theme/lorashen/static/sass/partial/_menu.sass */
+.menu-unit__item {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all .2s ease-in-out; }
+  @media only screen and (min-width: 1024px) {
+    /* line 224, theme/lorashen/static/sass/partial/_menu.sass */
+    .menu-unit__item {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 10px 0;
+      color: #242729;
+      position: relative; } }
+  @media only screen and (min-width: 1380px) {
+    /* line 224, theme/lorashen/static/sass/partial/_menu.sass */
+    .menu-unit__item {
+      font-size: 0.75rem; } }
+  /* line 244, theme/lorashen/static/sass/partial/_menu.sass */
+  .menu-unit__item:hover, .menu-unit__item:focus {
+    color: #ffffff;
+    text-decoration: none; }
+    @media only screen and (min-width: 1024px) {
+      /* line 244, theme/lorashen/static/sass/partial/_menu.sass */
+      .menu-unit__item:hover, .menu-unit__item:focus {
+        color: #926a36; } }
+@media only screen and (min-width: 768px) {
+  /* line 251, theme/lorashen/static/sass/partial/_menu.sass */
+  .sub-menu--main {
+    display: none; } }
+
+/* line 255, theme/lorashen/static/sass/partial/_menu.sass */
+.sub-menu--nav-bar {
+  width: 72%;
+  text-align: end; }
+
+@media only screen and (max-width: 768px) {
+  /* line 259, theme/lorashen/static/sass/partial/_menu.sass */
+  .mobile--hide {
+    display: none !important; } }
+
+@media only screen and (min-width: 768px) {
+  /* line 263, theme/lorashen/static/sass/partial/_menu.sass */
+  .mobile--show--only {
+    display: none !important; } }
+
+/* line 3, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.shop-menu {
+  margin-bottom: 35px; }
+
+/* line 6, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.sm-topbar-wrapper {
+  width: 100%; }
+
+/* line 9, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.sm-topbar {
+  width: 100%;
+  height: 47px;
+  max-width: 1170px;
+  padding: 0 0 0 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 768px) {
+    /* line 9, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .sm-topbar {
+      margin-top: 35px;
+      padding: 0 15px; } }
+/* line 23, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.topblock-left {
+  display: flex;
+  align-items: center; }
+  /* line 26, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-left__row {
+    display: flex;
+    flex-flow: column; }
+    /* line 29, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .topblock-left__row span {
+      font-family: "Comfortaa", cursive;
+      font-size: 0.75rem;
+      display: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      left: 0; }
+      @media only screen and (min-width: 992px) {
+        /* line 29, theme/lorashen/static/sass/partial/_shop-menu.sass */
+        .topblock-left__row span {
+          display: block; } }
+/* line 39, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.topblock-link:not(:last-of-type) {
+  margin-right: 30px; }
+
+/* line 41, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.topblock-link {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    /* line 41, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .topblock-link {
+      display: inline-flex; } }
+/* line 46, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.topblock-right {
+  display: flex;
+  align-items: center; }
+  /* line 49, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-right .language-panel {
+    display: none; }
+    @media only screen and (min-width: 1024px) {
+      /* line 49, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .topblock-right .language-panel {
+        width: auto;
+        display: inline-flex;
+        align-self: center;
+        margin-right: 20px;
+        margin-left: 0; } }
+  /* line 57, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-right .topblock-link {
+    display: none; }
+    @media only screen and (min-width: 1024px) {
+      /* line 57, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .topblock-right .topblock-link {
+        display: inline-flex;
+        margin-right: 20px; } }
+/* line 63, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.topblock-phone {
+  margin-right: 10px;
+  color: #926a36;
+  font-family: "Comfortaa", cursive;
+  font-weight: 300;
+  white-space: nowrap; }
+  @media only screen and (min-width: 768px) {
+    /* line 63, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .topblock-phone {
+      padding-bottom: 7px;
+      margin-top: 6px;
+      margin-right: 35px; } }
+  /* line 73, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-phone:hover, .topblock-phone:focus {
+    color: #da4453; }
+
+/* line 77, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.topblock-link {
+  align-self: center;
+  color: #4a4a4a; }
+  /* line 80, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-link:hover, .topblock-link:focus {
+    color: #926a36; }
+
+/* line 84, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.login {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-left: 1px solid #d8d8d8;
+  background-color: #fafafa; }
+  /* line 90, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .login-link {
+    display: inline-flex;
+    align-items: center;
+    color: #4a4a4a; }
+    /* line 94, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .login-link span {
+      display: none; }
+    @media only screen and (min-width: 1024px) {
+      /* line 97, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .login-link svg {
+        margin-right: 10px; }
+      /* line 99, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .login-link span {
+        display: inline-block; } }
+    /* line 101, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .login-link:hover, .login-link:focus {
+      color: #926a36; }
+      /* line 104, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .login-link:hover .login-ico, .login-link:focus .login-ico {
+        stroke: #926a36; }
+  /* line 106, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .login .login-ico {
+    fill: transparent;
+    stroke: #4a4a4a; }
+
+/* line 109, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.cart {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-left: 1px solid #d8d8d8; }
+  /* line 115, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .cart-link {
+    display: inline-flex;
+    color: #4a4a4a; }
+    /* line 118, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .cart-link .cart-ico {
+      fill: #4a4a4a; }
+    /* line 120, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .cart-link .cart-numbers {
+      color: #ffffff; }
+    /* line 122, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .cart-link:hover, .cart-link:focus {
+      color: #926a36; }
+      /* line 125, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .cart-link:hover .cart-numbers, .cart-link:focus .cart-numbers {
+        color: #ffffff; }
+    /* line 127, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .cart-link .cart-wrap {
+      display: inline-flex; }
+    /* line 129, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .cart-link .cart-text {
+      display: none; }
+      @media only screen and (min-width: 1024px) {
+        /* line 129, theme/lorashen/static/sass/partial/_shop-menu.sass */
+        .cart-link .cart-text {
+          display: inline-flex; } }
+  /* line 133, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .cart .cart-wrap {
+    position: relative;
+    margin-right: 10px; }
+    @media only screen and (min-width: 1024px) {
+      /* line 137, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .cart .cart-wrap svg {
+        position: relative;
+        bottom: -2px; } }
+  /* line 141, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .cart .cart-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #da4453;
+    font-size: 10px;
+    position: absolute;
+    top: -5px;
+    right: -7px; }
+
+/* line 154, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.topblock-search {
+  display: flex;
+  max-width: 52px;
+  min-width: 52px;
+  border-right: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  position: relative; }
+  /* line 163, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-search button {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; }
+  /* line 169, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-search .search-ico {
+    fill: #4a4a4a; }
+  /* line 171, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-search form {
+    height: 48px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background: gray;
+    position: absolute;
+    top: -810%;
+    right: 0;
+    transition: top .2s ease-in-out; }
+    @media only screen and (min-width: 768px) {
+      /* line 171, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .topblock-search form {
+        width: 500px; } }
+  /* line 184, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .topblock-search.open form {
+    top: -15px; }
+
+/* line 187, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.search-top-form {
+  padding: 0 10px; }
+  /* line 189, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .search-top-form svg {
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    cursor: pointer; }
+
+/* line 195, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.search-top-form__inputs {
+  display: flex;
+  width: 90%;
+  height: 30px; }
+  /* line 199, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .search-top-form__inputs input[type="text"] {
+    flex-grow: 1;
+    border: 1px solid transparent; }
+    /* line 202, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .search-top-form__inputs input[type="text"]:active, .search-top-form__inputs input[type="text"]:focus {
+      outline: 0;
+      border: 1px solid #00a395; }
+  /* line 206, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .search-top-form__inputs input[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 65px;
+    min-width: 65px;
+    padding: 0;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 400;
+    border: 1px solid transparent; }
+    /* line 219, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .search-top-form__inputs input[type="submit"]:hover {
+      background-color: transparent; }
+
+/* line 222, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.logo-shop {
+  display: inline-flex;
+  margin-right: 40px;
+  align-items: center; }
+  /* line 228, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .logo-shop:hover .logo-hover, .logo-shop:focus .logo-hover {
+    fill: #da4453; }
+
+/* line 231, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.shopmenu-wrap {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 64px;
+  max-width: 1170px;
+  width: 100%;
+  position: relative; }
+  /* line 239, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .shopmenu-wrap:after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #d8d8d8;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+    @media only screen and (min-width: 1024px) {
+      /* line 239, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .shopmenu-wrap:after {
+        width: calc(100% - 30px);
+        left: 15px; } }
+/* line 251, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.group-collapse {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  width: 280px;
+  transition: left .2s ease-in-out;
+  background-color: #ffffff;
+  border-right: 1px solid #926a36;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -280px;
+  z-index: 99999; }
+  @media only screen and (min-width: 1024px) {
+    /* line 251, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .group-collapse {
+      flex-direction: row;
+      width: 100%;
+      border-right: none;
+      position: static;
+      z-index: auto; } }
+@media only screen and (max-width: 1023px) {
+  /* line 270, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .group-collapse--open {
+    left: 0; } }
+
+/* line 273, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.group-collapse__inner {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (max-width: 1023px) {
+    /* line 273, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .group-collapse__inner {
+      overflow-y: auto;
+      padding-right: 10px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      left: 10px; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 273, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .group-collapse__inner {
+      flex-direction: row;
+      width: 100%; } }
+/* line 288, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.navtop-links {
+  display: block;
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  text-align: center; }
+  @media only screen and (min-width: 1024px) {
+    /* line 288, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .navtop-links {
+      display: none; } }
+  /* line 296, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .navtop-links .language-panel a {
+    padding: 5px 10px;
+    color: #333333; }
+    /* line 299, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .navtop-links .language-panel a:hover, .navtop-links .language-panel a:focus {
+      color: #926a36; }
+
+/* line 302, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.navtop-links__item {
+  color: #333333;
+  text-transform: uppercase;
+  padding: 5px 10px; }
+  /* line 306, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .navtop-links__item:hover, .navtop-links__item:focus {
+    color: #926a36;
+    text-decoration: none; }
+
+/* line 311, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.shopmenu {
+  display: block;
+  width: 100%;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1024px) {
+    /* line 311, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .shopmenu {
+      display: flex;
+      flex-direction: row;
+      margin-left: auto; } }
+  /* line 319, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .shopmenu > li {
+    display: flex;
+    flex-grow: 1;
+    min-height: 65px;
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 1024px) {
+      /* line 319, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .shopmenu > li {
+        background-color: #ffffff;
+        margin-bottom: 0;
+        min-height: 0;
+        max-height: auto; } }
+/* line 331, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.shopmenu__dropdown {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 1024px) {
+    /* line 331, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .shopmenu__dropdown {
+      flex-direction: row; } }
+  /* line 337, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .shopmenu__dropdown.open .shopmenu__unit svg {
+    transform: translateY(-50%) rotate(-90deg); }
+  /* line 340, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .shopmenu__dropdown.open .dropdown-block {
+    display: block;
+    animation-name: dropdown-appear;
+    animation-duration: 1s; }
+    @media only screen and (min-width: 1024px) {
+      /* line 340, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .shopmenu__dropdown.open .dropdown-block {
+        display: flex;
+        flex-direction: row; } }
+  /* line 347, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .shopmenu__dropdown .shopmenu__unit {
+    padding: 0 20px; }
+
+/* line 350, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.shopmenu__unit,
+.shopmenu__unit:visited {
+  width: 100%;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #ffffff;
+  background-color: #3c4144;
+  font-weight: 400;
+  letter-spacing: 0.0125rem;
+  position: relative; }
+  @media only screen and (min-width: 1024px) {
+    /* line 350, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .shopmenu__unit,
+    .shopmenu__unit:visited {
+      height: auto;
+      color: #333333;
+      background-color: transparent;
+      font-size: 0.75rem; } }
+  @media only screen and (min-width: 1200px) {
+    /* line 350, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .shopmenu__unit,
+    .shopmenu__unit:visited {
+      font-size: 0.875rem; } }
+  /* line 372, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .shopmenu__unit > svg,
+  .shopmenu__unit:visited > svg {
+    transform: translateY(-50%) rotate(90deg);
+    top: -1px;
+    fill: #ffffff;
+    position: absolute;
+    right: 1px;
+    top: 49%; }
+    @media only screen and (min-width: 1024px) {
+      /* line 372, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .shopmenu__unit > svg,
+      .shopmenu__unit:visited > svg {
+        fill: #333333; } }
+  /* line 382, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .shopmenu__unit:hover,
+  .shopmenu__unit:visited:hover {
+    background-color: #926a36; }
+    @media only screen and (min-width: 1024px) {
+      /* line 382, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .shopmenu__unit:hover,
+      .shopmenu__unit:visited:hover {
+        background-color: transparent;
+        color: #926a36; }
+        /* line 387, theme/lorashen/static/sass/partial/_shop-menu.sass */
+        .shopmenu__unit:hover .chevron-ico,
+        .shopmenu__unit:visited:hover .chevron-ico {
+          fill: #da4453; } }
+/* line 390, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.dropdown-block {
+  display: none;
+  background-color: #fafafa;
+  border-bottom: 2px solid #3c4144;
+  font-family: "Roboto", sans-serif; }
+  @media only screen and (min-width: 1024px) {
+    /* line 390, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .dropdown-block {
+      display: none;
+      width: calc(100% - 30px);
+      padding: 25px 25px 75px 25px;
+      background-color: #ffffff;
+      border-top: 2px solid #926a36;
+      border-bottom: none;
+      position: absolute;
+      top: 62px;
+      left: 15px;
+      z-index: 10001;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2); } }
+  /* line 408, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .dropdown-block-all {
+    transition: all .2s ease-in-out;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #926a36; }
+    @media only screen and (min-width: 1024px) {
+      /* line 408, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .dropdown-block-all {
+        border-top: 1px solid #eee;
+        height: 50px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 0;
+        bottom: 0; }
+        /* line 425, theme/lorashen/static/sass/partial/_shop-menu.sass */
+        .dropdown-block-all:hover {
+          background-color: #926a36;
+          border-color: transparent;
+          color: #ffffff; } }
+/* line 430, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.dropdown-item {
+  width: 100%; }
+  @media only screen and (min-width: 1024px) {
+    /* line 430, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .dropdown-item {
+      width: 25%;
+      padding-right: 15px; } }
+/* line 436, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.dropdown-item__header {
+  text-align: center;
+  padding: 15px 0 5px 0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #926a36; }
+  @media only screen and (min-width: 1024px) {
+    /* line 436, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .dropdown-item__header {
+      text-align: left;
+      padding: 5px 0; } }
+/* line 446, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.dropdown-item__list {
+  display: flex;
+  flex-direction: column; }
+  /* line 449, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .dropdown-item__list li {
+    display: flex;
+    width: 100%;
+    min-height: 40px; }
+    @media only screen and (min-width: 1024px) {
+      /* line 449, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .dropdown-item__list li {
+        min-height: auto; } }
+    /* line 455, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .dropdown-item__list li:not(:last-of-type) {
+      border-bottom: 1px solid #d8d8d8; }
+      @media only screen and (min-width: 1024px) {
+        /* line 455, theme/lorashen/static/sass/partial/_shop-menu.sass */
+        .dropdown-item__list li:not(:last-of-type) {
+          border-bottom: none; } }
+/* line 460, theme/lorashen/static/sass/partial/_shop-menu.sass */
+.dropdown-item__link {
+  display: inline-flex;
+  width: 100%;
+  padding: 5px 10px;
+  align-items: center;
+  color: #333333;
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 1024px) {
+    /* line 460, theme/lorashen/static/sass/partial/_shop-menu.sass */
+    .dropdown-item__link {
+      display: inline-block;
+      padding: 5px 0 0;
+      width: auto;
+      line-height: 1.35; } }
+  /* line 472, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  .dropdown-item__link:hover, .dropdown-item__link:focus {
+    color: #000000;
+    background-color: #d8d8d8; }
+    @media only screen and (min-width: 1024px) {
+      /* line 472, theme/lorashen/static/sass/partial/_shop-menu.sass */
+      .dropdown-item__link:hover, .dropdown-item__link:focus {
+        color: #926a36;
+        background-color: transparent; } }
+@keyframes dropdown-appear {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+/* line 494, theme/lorashen/static/sass/partial/_shop-menu.sass */
+#shopmenu .burger {
+  right: 10px; }
+  /* line 497, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  #shopmenu .burger.burger-active .burger-bar:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 6px; }
+  /* line 500, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  #shopmenu .burger.burger-active .burger-bar:nth-of-type(2) {
+    opacity: 0; }
+  /* line 502, theme/lorashen/static/sass/partial/_shop-menu.sass */
+  #shopmenu .burger.burger-active .burger-bar:nth-of-type(3) {
+    transform: rotate(135deg);
+    top: -6px; }
+
+/* line 1, theme/lorashen/static/sass/partial/_shop-main.sass */
+.more-products {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  /* line 9, theme/lorashen/static/sass/partial/_shop-main.sass */
+  .more-products a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #242729;
+    background-color: #fafafa;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    /* line 25, theme/lorashen/static/sass/partial/_shop-main.sass */
+    .more-products a:hover, .more-products a:focus {
+      color: #926a36;
+      background-color: #ededed; }
+      /* line 29, theme/lorashen/static/sass/partial/_shop-main.sass */
+      .more-products a:hover .shop-more-ico__inner, .more-products a:focus .shop-more-ico__inner {
+        fill: #926a36; }
+  /* line 32, theme/lorashen/static/sass/partial/_shop-main.sass */
+  .more-products .shop-more-ico {
+    width: 3rem; }
+    @media only screen and (min-width: 480px) {
+      /* line 32, theme/lorashen/static/sass/partial/_shop-main.sass */
+      .more-products .shop-more-ico {
+        width: 5rem; } }
+  /* line 36, theme/lorashen/static/sass/partial/_shop-main.sass */
+  .more-products .shop-more-ico__inner {
+    fill: #d8d8d8;
+    transition: fill .2s ease-in-out; }
+
+/* line 2, theme/lorashen/static/sass/partial/_carousels.sass */
+.ls-carousel {
+  overflow: hidden;
+  width: 100%;
+  height: 360px;
+  margin-bottom: 40px;
+  position: relative;
+  background-color: transparent; }
+  @media only screen and (min-width: 768px) {
+    /* line 2, theme/lorashen/static/sass/partial/_carousels.sass */
+    .ls-carousel {
+      height: 520px; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 2, theme/lorashen/static/sass/partial/_carousels.sass */
+    .ls-carousel {
+      height: 640px; } }
+  /* line 13, theme/lorashen/static/sass/partial/_carousels.sass */
+  .ls-carousel .item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 360px;
+    background-color: #b3b3b3;
+    background-position: center center;
+    background-size: cover;
+    position: relative; }
+    @media only screen and (min-width: 768px) {
+      /* line 13, theme/lorashen/static/sass/partial/_carousels.sass */
+      .ls-carousel .item {
+        height: 520px; } }
+    @media only screen and (min-width: 992px) {
+      /* line 13, theme/lorashen/static/sass/partial/_carousels.sass */
+      .ls-carousel .item {
+        justify-content: flex-start; } }
+    @media only screen and (min-width: 1024px) {
+      /* line 13, theme/lorashen/static/sass/partial/_carousels.sass */
+      .ls-carousel .item {
+        height: 640px; } }
+  /* line 31, theme/lorashen/static/sass/partial/_carousels.sass */
+  .ls-carousel .owl-stage {
+    display: flex; }
+  /* line 33, theme/lorashen/static/sass/partial/_carousels.sass */
+  .ls-carousel .owl-nav.disabled {
+    display: none; }
+
+/* line 38, theme/lorashen/static/sass/partial/_carousels.sass */
+.slide-inner {
+  width: 90%;
+  margin: 0 auto 20px auto;
+  display: block;
+  padding: 20px;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    /* line 38, theme/lorashen/static/sass/partial/_carousels.sass */
+    .slide-inner {
+      padding: 30px 50px; } }
+  @media only screen and (min-width: 992px) {
+    /* line 38, theme/lorashen/static/sass/partial/_carousels.sass */
+    .slide-inner {
+      width: 60%;
+      padding: 30px 50px;
+      margin-bottom: 50px; } }
+  @media only screen and (min-width: 1480px) {
+    /* line 38, theme/lorashen/static/sass/partial/_carousels.sass */
+    .slide-inner {
+      width: 50%; } }
+  @media only screen and (min-width: 1600px) {
+    /* line 38, theme/lorashen/static/sass/partial/_carousels.sass */
+    .slide-inner {
+      width: 40%; } }
+  /* line 54, theme/lorashen/static/sass/partial/_carousels.sass */
+  .slide-inner.dark-background {
+    background-color: rgba(0, 0, 0, 0.25); }
+
+/* line 57, theme/lorashen/static/sass/partial/_carousels.sass */
+.slide-inner__header {
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 20px; }
+  @media only screen and (min-width: 768px) {
+    /* line 57, theme/lorashen/static/sass/partial/_carousels.sass */
+    .slide-inner__header {
+      font-size: 2rem; } }
+/* line 68, theme/lorashen/static/sass/partial/_carousels.sass */
+.slide-inner__description {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px; }
+
+/* line 76, theme/lorashen/static/sass/partial/_carousels.sass */
+.slide-inner__link {
+  display: inline-block;
+  padding: 5px 25px 5px 10px;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  position: relative; }
+  /* line 87, theme/lorashen/static/sass/partial/_carousels.sass */
+  .slide-inner__link:after {
+    content: '\2192';
+    position: absolute;
+    right: 5px; }
+  /* line 91, theme/lorashen/static/sass/partial/_carousels.sass */
+  .slide-inner__link:focus, .slide-inner__link:hover {
+    color: #ffffff;
+    background-color: #da4453;
+    text-decoration: none; }
+
+/* line 211, theme/lorashen/static/sass/partial/_carousels.sass */
+.owl-nav.disabled,
+.owl-dots.disabled {
+  display: none; }
+
+/* line 215, theme/lorashen/static/sass/partial/_carousels.sass */
+.owl-dots {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0; }
+  /* line 227, theme/lorashen/static/sass/partial/_carousels.sass */
+  .owl-dots .owl-dot {
+    cursor: pointer;
+    width: 40px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray; }
+    /* line 237, theme/lorashen/static/sass/partial/_carousels.sass */
+    .owl-dots .owl-dot.active {
+      border-color: #ffffff; }
+      /* line 239, theme/lorashen/static/sass/partial/_carousels.sass */
+      .owl-dots .owl-dot.active > span {
+        width: 36px;
+        height: 4px;
+        display: block;
+        background-color: #ffffff; }
+    /* line 245, theme/lorashen/static/sass/partial/_carousels.sass */
+    .owl-dots .owl-dot:not(:last-of-type) {
+      margin-right: 5px; }
+
+/* line 249, theme/lorashen/static/sass/partial/_carousels.sass */
+.animated {
+  animation-duration: 4s;
+  animation-fill-mode: both; }
+
+/* line 255, theme/lorashen/static/sass/partial/_carousels.sass */
+.owl-animated-out {
+  z-index: 1; }
+
+/* line 260, theme/lorashen/static/sass/partial/_carousels.sass */
+.owl-animated-in {
+  z-index: 0; }
+
+/* line 264, theme/lorashen/static/sass/partial/_carousels.sass */
+.fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0.7; } }
+
+/* line 275, theme/lorashen/static/sass/partial/_carousels.sass */
+.fadeIn {
+  animation-name: fadeIn; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.7; }
+  30% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+/* line 2, theme/lorashen/static/sass/partial/_sections.sass */
+.si {
+  text-align: center;
+  margin-bottom: 30px; }
+  /* line 9, theme/lorashen/static/sass/partial/_sections.sass */
+  .si-header {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1875rem; }
+    /* line 16, theme/lorashen/static/sass/partial/_sections.sass */
+    .si-header > a {
+      color: #000000; }
+      /* line 18, theme/lorashen/static/sass/partial/_sections.sass */
+      .si-header > a:focus, .si-header > a:hover {
+        color: #1a1a1a;
+        text-decoration: none; }
+
+/* line 22, theme/lorashen/static/sass/partial/_sections.sass */
+.si-showcase {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+/* line 28, theme/lorashen/static/sass/partial/_sections.sass */
+.si-plate {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 40px; }
+  @media only screen and (min-width : 480px) {
+    /* line 28, theme/lorashen/static/sass/partial/_sections.sass */
+    .si-plate {
+      width: 48%;
+      max-width: 48%; } }
+  @media only screen and (min-width : 768px) {
+    /* line 28, theme/lorashen/static/sass/partial/_sections.sass */
+    .si-plate {
+      width: 32%;
+      max-width: 32%; } }
+  /* line 39, theme/lorashen/static/sass/partial/_sections.sass */
+  .si-plate__image {
+    width: 100%;
+    height: 240px;
+    background-color: lemonchiffon;
+    margin-bottom: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  /* line 45, theme/lorashen/static/sass/partial/_sections.sass */
+  .si-plate__header {
+    padding-left: 10px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+    transition: color .2s ease-in-out; }
+  /* line 54, theme/lorashen/static/sass/partial/_sections.sass */
+  .si-plate:hover .si-plate__header, .si-plate:focus .si-plate__header {
+    color: #926a36; }
+
+/* line 58, theme/lorashen/static/sass/partial/_sections.sass */
+.s1 {
+  width: 100%;
+  text-align: center; }
+  /* line 61, theme/lorashen/static/sass/partial/_sections.sass */
+  .s1:not(:last-of-type) {
+    margin-bottom: 30px; }
+  /* line 67, theme/lorashen/static/sass/partial/_sections.sass */
+  .s1-img {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 30px;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    @media only screen and (min-width : 480px) {
+      /* line 67, theme/lorashen/static/sass/partial/_sections.sass */
+      .s1-img {
+        height: 300px; } }
+    @media only screen and (min-width : 768px) {
+      /* line 67, theme/lorashen/static/sass/partial/_sections.sass */
+      .s1-img {
+        height: 420px; } }
+    @media only screen and (min-width : 992px) {
+      /* line 67, theme/lorashen/static/sass/partial/_sections.sass */
+      .s1-img {
+        height: 520px; } }
+  /* line 81, theme/lorashen/static/sass/partial/_sections.sass */
+  .s1-header {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1875rem; }
+    /* line 89, theme/lorashen/static/sass/partial/_sections.sass */
+    .s1-header > a {
+      color: #000000; }
+      /* line 91, theme/lorashen/static/sass/partial/_sections.sass */
+      .s1-header > a:focus, .s1-header > a:hover {
+        color: #1a1a1a;
+        text-decoration: none; }
+  /* line 96, theme/lorashen/static/sass/partial/_sections.sass */
+  .s1-description {
+    font-family: "Roboto", sans-serif;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-align: center; }
+    @media only screen and (min-width : 768px) {
+      /* line 96, theme/lorashen/static/sass/partial/_sections.sass */
+      .s1-description {
+        width: 80%; } }
+  /* line 108, theme/lorashen/static/sass/partial/_sections.sass */
+  .s1-detail {
+    margin-bottom: 30px; }
+
+/* line 111, theme/lorashen/static/sass/partial/_sections.sass */
+.catlist {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; }
+  @media only screen and (min-width : 768px) {
+    /* line 111, theme/lorashen/static/sass/partial/_sections.sass */
+    .catlist {
+      flex-direction: row;
+      justify-content: space-between; } }
+  @media only screen and (min-width : 768px) {
+    /* line 120, theme/lorashen/static/sass/partial/_sections.sass */
+    .catlist.catlist--small-first .s1:nth-of-type(n) {
+      width: 49%; } }
+  /* line 123, theme/lorashen/static/sass/partial/_sections.sass */
+  .catlist .s1 {
+    width: 100%; }
+    @media only screen and (min-width : 768px) {
+      /* line 123, theme/lorashen/static/sass/partial/_sections.sass */
+      .catlist .s1 {
+        width: 49%; } }
+  @media only screen and (min-width : 768px) {
+    /* line 128, theme/lorashen/static/sass/partial/_sections.sass */
+    .catlist .s1:nth-of-type(3n + 1) {
+      width: 100%; } }
+/* line 134, theme/lorashen/static/sass/partial/_sections.sass */
+.extra-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-bottom: 60px;
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    /* line 134, theme/lorashen/static/sass/partial/_sections.sass */
+    .extra-description {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto; } }
+  /* line 144, theme/lorashen/static/sass/partial/_sections.sass */
+  .extra-description ul {
+    list-style-position: inside; }
+
+/* line 148, theme/lorashen/static/sass/partial/_sections.sass */
+.tinymce-style ul {
+  list-style-type: disc; }
+
+/* line 186, theme/lorashen/static/sass/partial/_sections.sass */
+.category {
+  text-align: center; }
+  /* line 188, theme/lorashen/static/sass/partial/_sections.sass */
+  .category-header {
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase; }
+    @media only screen and (min-width : 480px) {
+      /* line 188, theme/lorashen/static/sass/partial/_sections.sass */
+      .category-header {
+        margin-bottom: 20px; } }
+  /* line 196, theme/lorashen/static/sass/partial/_sections.sass */
+  .category-description {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 25px;
+    padding: 0 10px;
+    font-size: 0.875rem;
+    font-weight: 300; }
+    @media only screen and (min-width : 480px) {
+      /* line 196, theme/lorashen/static/sass/partial/_sections.sass */
+      .category-description {
+        padding: 0 30px;
+        margin-bottom: 30px; } }
+  /* line 205, theme/lorashen/static/sass/partial/_sections.sass */
+  .category hr {
+    margin-top: 0;
+    border: none;
+    color: #c9c9c9;
+    background-color: #c9c9c9;
+    height: 1px;
+    margin-bottom: 30px; }
+    @media only screen and (min-width : 480px) {
+      /* line 205, theme/lorashen/static/sass/partial/_sections.sass */
+      .category hr {
+        margin-bottom: 40px; } }
+/* line 216, theme/lorashen/static/sass/partial/_sections.sass */
+.category-subheader {
+  margin-bottom: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1875rem; }
+  @media only screen and (min-width : 480px) {
+    /* line 216, theme/lorashen/static/sass/partial/_sections.sass */
+    .category-subheader {
+      margin-bottom: 30px; } }
+/* line 226, theme/lorashen/static/sass/partial/_sections.sass */
+.newspage {
+  margin-bottom: 20px; }
+  /* line 228, theme/lorashen/static/sass/partial/_sections.sass */
+  .newspage-header {
+    margin-bottom: 0;
+    font-weight: 400;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase; }
+    @media only screen and (min-width : 480px) {
+      /* line 228, theme/lorashen/static/sass/partial/_sections.sass */
+      .newspage-header {
+        margin-bottom: 0; } }
+  /* line 235, theme/lorashen/static/sass/partial/_sections.sass */
+  .newspage hr {
+    margin-top: 0;
+    border: none;
+    color: #c9c9c9;
+    background-color: #c9c9c9;
+    height: 1px;
+    margin-bottom: 30px; }
+    @media only screen and (min-width : 480px) {
+      /* line 235, theme/lorashen/static/sass/partial/_sections.sass */
+      .newspage hr {
+        margin-bottom: 40px; } }
+  /* line 244, theme/lorashen/static/sass/partial/_sections.sass */
+  .newspage-content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    margin-bottom: 40px; }
+
+/* line 251, theme/lorashen/static/sass/partial/_sections.sass */
+.portfolio {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 60px; }
+  /* line 256, theme/lorashen/static/sass/partial/_sections.sass */
+  .portfolio__media {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 20px; }
+    @media only screen and (min-width : 992px) {
+      /* line 256, theme/lorashen/static/sass/partial/_sections.sass */
+      .portfolio__media {
+        margin-bottom: 0; } }
+  @media only screen and (min-width : 992px) {
+    /* line 264, theme/lorashen/static/sass/partial/_sections.sass */
+    .portfolio__content {
+      padding-left: 60px; } }
+  /* line 267, theme/lorashen/static/sass/partial/_sections.sass */
+  .portfolio__header {
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-transform: uppercase; }
+  /* line 271, theme/lorashen/static/sass/partial/_sections.sass */
+  .portfolio__description {
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-align: justify;
+    font-family: "Roboto", sans-serif; }
+
+/* line 278, theme/lorashen/static/sass/partial/_sections.sass */
+.portfolio-gallery {
+  min-height: 300px;
+  width: 100%;
+  margin-bottom: 2px;
+  overflow: hidden; }
+  @media only screen and (min-width : 992px) {
+    /* line 278, theme/lorashen/static/sass/partial/_sections.sass */
+    .portfolio-gallery {
+      min-height: 0; } }
+  /* line 287, theme/lorashen/static/sass/partial/_sections.sass */
+  .portfolio-gallery__item, .portfolio-gallery__item--nav {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+/* line 1, theme/lorashen/static/sass/partial/_about.sass */
+.about-tabs {
+  min-height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 9, theme/lorashen/static/sass/partial/_about.sass */
+  .about-tabs__unit {
+    font-family: "Comfortaa", cursive;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: #333333;
+    border-bottom: 2px solid transparent; }
+    /* line 15, theme/lorashen/static/sass/partial/_about.sass */
+    .about-tabs__unit:hover {
+      color: #926a36;
+      border-bottom: 2px solid #926a36; }
+    /* line 18, theme/lorashen/static/sass/partial/_about.sass */
+    .about-tabs__unit.active {
+      color: #926a36;
+      border-bottom: 2px solid #926a36; }
+  /* line 22, theme/lorashen/static/sass/partial/_about.sass */
+  .about-tabs__unit:not(:last-of-type) {
+    margin-right: 20px; }
+    @media only screen and (min-width : 480px) {
+      /* line 22, theme/lorashen/static/sass/partial/_about.sass */
+      .about-tabs__unit:not(:last-of-type) {
+        margin-right: 40px; } }
+/* line 27, theme/lorashen/static/sass/partial/_about.sass */
+.tabs-content {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+  margin-bottom: 60px; }
+
+/* line 34, theme/lorashen/static/sass/partial/_about.sass */
+.owner-card {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width : 992px) {
+    /* line 34, theme/lorashen/static/sass/partial/_about.sass */
+    .owner-card {
+      flex-direction: row; } }
+  /* line 40, theme/lorashen/static/sass/partial/_about.sass */
+  .owner-card__image {
+    text-align: center;
+    margin-bottom: 20px; }
+    @media only screen and (min-width : 992px) {
+      /* line 40, theme/lorashen/static/sass/partial/_about.sass */
+      .owner-card__image {
+        margin-bottom: 0; } }
+    /* line 45, theme/lorashen/static/sass/partial/_about.sass */
+    .owner-card__image img {
+      width: 80%;
+      height: auto; }
+      @media only screen and (min-width : 992px) {
+        /* line 45, theme/lorashen/static/sass/partial/_about.sass */
+        .owner-card__image img {
+          width: 400px; } }
+  /* line 51, theme/lorashen/static/sass/partial/_about.sass */
+  .owner-card__content {
+    margin-left: 0; }
+    @media only screen and (min-width : 992px) {
+      /* line 51, theme/lorashen/static/sass/partial/_about.sass */
+      .owner-card__content {
+        margin-left: 40px; } }
+  /* line 55, theme/lorashen/static/sass/partial/_about.sass */
+  .owner-card__name {
+    font-size: 1.2rem;
+    font-weight: 400; }
+  /* line 58, theme/lorashen/static/sass/partial/_about.sass */
+  .owner-card__position {
+    color: #926a36;
+    font-style: italic;
+    margin-bottom: 10px; }
+
+/* line 63, theme/lorashen/static/sass/partial/_about.sass */
+.contact-block {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  /* line 70, theme/lorashen/static/sass/partial/_about.sass */
+  .contact-block:not(:last-of-type) {
+    margin-bottom: 20px; }
+
+/* line 72, theme/lorashen/static/sass/partial/_about.sass */
+.contact-block__header {
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: start; }
+
+/* line 78, theme/lorashen/static/sass/partial/_about.sass */
+.contact-block__contacts {
+  display: flex;
+  flex-direction: column; }
+
+/* line 84, theme/lorashen/static/sass/partial/_about.sass */
+.contact-card {
+  display: inline-flex;
+  flex-direction: column;
+  width: 280px;
+  margin-bottom: 20px; }
+  /* line 89, theme/lorashen/static/sass/partial/_about.sass */
+  .contact-card__name {
+    font-weight: 400; }
+  /* line 91, theme/lorashen/static/sass/partial/_about.sass */
+  .contact-card a {
+    color: #333333; }
+
+/* line 95, theme/lorashen/static/sass/partial/_about.sass */
+.tabs-content--partners .tabs-content__unit {
+  display: flex;
+  flex-direction: column; }
+
+/* line 98, theme/lorashen/static/sass/partial/_about.sass */
+.partners-block {
+  display: flex;
+  flex-direction: column; }
+  /* line 102, theme/lorashen/static/sass/partial/_about.sass */
+  .partners-block:not(:last-of-type) {
+    margin-bottom: 40px; }
+  /* line 104, theme/lorashen/static/sass/partial/_about.sass */
+  .partners-block__header {
+    padding-bottom: 20px;
+    font-weight: 400;
+    text-align: center; }
+  /* line 108, theme/lorashen/static/sass/partial/_about.sass */
+  .partners-block__list {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: baseline;
+    justify-content: left; }
+    /* line 114, theme/lorashen/static/sass/partial/_about.sass */
+    .partners-block__list__item {
+      flex: 0 0 21%;
+      margin: 5px 5px 40px 5px;
+      height: auto; }
+      /* line 118, theme/lorashen/static/sass/partial/_about.sass */
+      .partners-block__list__item img {
+        max-width: 200px;
+        max-height: 105px; }
+      /* line 121, theme/lorashen/static/sass/partial/_about.sass */
+      .partners-block__list__item__gray {
+        opacity: 70%;
+        filter: grayscale(100%); }
+
+/* line 125, theme/lorashen/static/sass/partial/_about.sass */
+.staff-container {
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+/* line 134, theme/lorashen/static/sass/partial/_about.sass */
+.c-card {
+  margin: 15px;
+  display: inline-block;
+  min-height: 300px;
+  width: 100%;
+  max-width: 280px;
+  perspective: 1000px; }
+  /* line 143, theme/lorashen/static/sass/partial/_about.sass */
+  .c-card:hover .c-card__flip {
+    transform: rotateY(180deg); }
+  /* line 145, theme/lorashen/static/sass/partial/_about.sass */
+  .c-card__flip {
+    width: 280px;
+    height: 340px;
+    transition: .5s;
+    transform-style: preserve-3d;
+    position: relative; }
+  /* line 151, theme/lorashen/static/sass/partial/_about.sass */
+  .c-card__front, .c-card__back {
+    height: 340px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: rotateY(0deg); }
+    /* line 160, theme/lorashen/static/sass/partial/_about.sass */
+    .c-card__front img, .c-card__back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center; }
+  /* line 165, theme/lorashen/static/sass/partial/_about.sass */
+  .c-card__back {
+    z-index: 0;
+    transform: rotateY(180deg); }
+  /* line 169, theme/lorashen/static/sass/partial/_about.sass */
+  .c-card__data {
+    padding-top: 20px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column; }
+    /* line 174, theme/lorashen/static/sass/partial/_about.sass */
+    .c-card__data > a {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 14px;
+      font-weight: 300;
+      color: #4A4A4A;
+      text-decoration: none; }
+  /* line 182, theme/lorashen/static/sass/partial/_about.sass */
+  .c-card__name {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 22px;
+    font-weight: 700; }
+  /* line 187, theme/lorashen/static/sass/partial/_about.sass */
+  .c-card__position {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 300; }
+
+/* line 1, theme/lorashen/static/sass/partial/_newslist.sass */
+.newslist {
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  color: #333333; }
+  @media only screen and (min-width: 580px) {
+    /* line 1, theme/lorashen/static/sass/partial/_newslist.sass */
+    .newslist {
+      flex-wrap: nowrap; } }
+  @media only screen and (min-width : 992px) {
+    /* line 1, theme/lorashen/static/sass/partial/_newslist.sass */
+    .newslist {
+      padding: 30px 60px; } }
+  /* line 13, theme/lorashen/static/sass/partial/_newslist.sass */
+  .newslist:hover, .newslist:active {
+    color: #1a1a1a; }
+    /* line 16, theme/lorashen/static/sass/partial/_newslist.sass */
+    .newslist:hover .newslist__more, .newslist:active .newslist__more {
+      color: #ffffff;
+      background-color: #926a36;
+      border: 1px solid #926a36; }
+  /* line 20, theme/lorashen/static/sass/partial/_newslist.sass */
+  .newslist__media {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: hidden; }
+    @media only screen and (min-width: 580px) {
+      /* line 20, theme/lorashen/static/sass/partial/_newslist.sass */
+      .newslist__media {
+        width: 300px;
+        min-width: 300px;
+        margin-right: 20px;
+        margin-bottom: 0; } }
+    @media only screen and (min-width : 992px) {
+      /* line 20, theme/lorashen/static/sass/partial/_newslist.sass */
+      .newslist__media {
+        margin-right: 40px; } }
+    /* line 32, theme/lorashen/static/sass/partial/_newslist.sass */
+    .newslist__media > img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center; }
+  /* line 37, theme/lorashen/static/sass/partial/_newslist.sass */
+  .newslist__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  /* line 43, theme/lorashen/static/sass/partial/_newslist.sass */
+  .newslist__header {
+    margin-bottom: 0;
+    font-weight: 300;
+    text-transform: uppercase; }
+  /* line 47, theme/lorashen/static/sass/partial/_newslist.sass */
+  .newslist__data {
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 0.875rem;
+    font-weight: 300; }
+  /* line 54, theme/lorashen/static/sass/partial/_newslist.sass */
+  .newslist__date {
+    margin-right: 20px;
+    position: relative; }
+    /* line 57, theme/lorashen/static/sass/partial/_newslist.sass */
+    .newslist__date:after {
+      content: '';
+      display: block;
+      width: 1px;
+      background-color: #242729;
+      position: absolute;
+      top: 2px;
+      right: -10px;
+      bottom: 4px; }
+  /* line 69, theme/lorashen/static/sass/partial/_newslist.sass */
+  .newslist__subject {
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.1;
+    text-align: justify; }
+  /* line 76, theme/lorashen/static/sass/partial/_newslist.sass */
+  .newslist__more {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    flex-wrap: nowrap;
+    min-height: 2rem;
+    padding: 0 10px;
+    border: 1px solid black;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out; }
+
+/* line 1, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop-wrapper {
+  display: block;
+  margin-bottom: 60px; }
+
+/* line 4, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop-unit {
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  color: #333333; }
+  @media only screen and (min-width: 580px) {
+    /* line 4, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit {
+      flex-wrap: nowrap; } }
+  @media only screen and (min-width : 992px) {
+    /* line 4, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit {
+      padding: 30px 60px; } }
+  /* line 15, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-unit__media {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 10px;
+    overflow: hidden; }
+    @media only screen and (min-width: 580px) {
+      /* line 15, theme/lorashen/static/sass/partial/_workshoplist.sass */
+      .workshop-unit__media {
+        max-width: 300px;
+        height: 300px;
+        width: 100%;
+        margin-right: 20px;
+        margin-bottom: 0; } }
+    @media only screen and (min-width : 992px) {
+      /* line 15, theme/lorashen/static/sass/partial/_workshoplist.sass */
+      .workshop-unit__media {
+        margin-right: 40px; } }
+    /* line 28, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit__media > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center; }
+  /* line 33, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-unit__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    /* line 39, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit__content .btn-standard {
+      align-self: flex-start; }
+  /* line 41, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-unit__header {
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-transform: uppercase; }
+  /* line 45, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-unit__dataset {
+    display: flex;
+    flex-direction: column; }
+  /* line 48, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-unit__label {
+    display: inline-flex;
+    margin-bottom: 5px;
+    align-items: center;
+    font-family: "Roboto", sans-serif; }
+    /* line 53, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit__label .label-header {
+      min-width: 80px;
+      margin-right: 10px;
+      font-weight: 600;
+      font-size: 0.875rem; }
+    /* line 58, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit__label .label-content {
+      font-size: 0.875rem; }
+      /* line 60, theme/lorashen/static/sass/partial/_workshoplist.sass */
+      .workshop-unit__label .label-content > a {
+        color: #242729;
+        font-weight: 300; }
+        /* line 63, theme/lorashen/static/sass/partial/_workshoplist.sass */
+        .workshop-unit__label .label-content > a:hover, .workshop-unit__label .label-content > a:focus {
+          text-decoration: underline; }
+    /* line 66, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit__label--date {
+      margin-bottom: 15px; }
+      /* line 68, theme/lorashen/static/sass/partial/_workshoplist.sass */
+      .workshop-unit__label--date .label-header,
+      .workshop-unit__label--date .label-content {
+        font-size: 1rem; }
+    /* line 71, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit__label--address {
+      margin-bottom: 15px; }
+      /* line 73, theme/lorashen/static/sass/partial/_workshoplist.sass */
+      .workshop-unit__label--address .label-content {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.2; }
+    /* line 78, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-unit__label--price {
+      margin-bottom: 15px; }
+      /* line 80, theme/lorashen/static/sass/partial/_workshoplist.sass */
+      .workshop-unit__label--price .label-header,
+      .workshop-unit__label--price .label-content {
+        font-size: 1rem; }
+  /* line 84, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-unit__warning {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-left: 2px solid #da4453;
+    font-size: 0.75rem;
+    font-weight: 300;
+    font-style: italic; }
+
+/* line 99, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop hr {
+  width: 100%;
+  margin-top: 0;
+  border: none;
+  color: #c9c9c9;
+  background-color: #c9c9c9;
+  height: 1px;
+  margin-bottom: 30px; }
+  @media only screen and (min-width : 480px) {
+    /* line 99, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop hr {
+      margin-bottom: 40px; } }
+/* line 110, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop-media {
+  width: 100%;
+  height: 290px;
+  margin-bottom: 20px; }
+  @media only screen and (min-width : 768px) {
+    /* line 110, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-media {
+      height: 340px; } }
+  @media only screen and (min-width : 992px) {
+    /* line 110, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-media {
+      height: auto;
+      margin-bottom: 0; } }
+  /* line 119, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-media__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; }
+
+/* line 124, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop-content {
+  margin-bottom: 60px; }
+
+/* line 126, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop-content__description {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-bottom: 40px; }
+  /* line 131, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-content__description p {
+    margin-top: 0; }
+    /* line 133, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-content__description p:last-child {
+      margin-bottom: 0; }
+
+/* line 136, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop-content__action a:not(:last-of-type) {
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 393px) {
+    /* line 136, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-content__action a:not(:last-of-type) {
+      margin-bottom: 0; } }
+/* line 141, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop-callback {
+  padding: 10px 20px;
+  border: 1px solid #926a36;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 20px; }
+  /* line 147, theme/lorashen/static/sass/partial/_workshoplist.sass */
+  .workshop-callback a {
+    color: #000000; }
+    /* line 149, theme/lorashen/static/sass/partial/_workshoplist.sass */
+    .workshop-callback a:hover, .workshop-callback a:focus {
+      color: #000000; }
+
+/* line 153, theme/lorashen/static/sass/partial/_workshoplist.sass */
+.workshop-no-registration {
+  padding: 10px 20px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  background-color: #da4453; }
+
+/* line 1, theme/lorashen/static/sass/partial/_shops.sass */
+.shop-unit {
+  margin-bottom: 60px; }
+  /* line 3, theme/lorashen/static/sass/partial/_shops.sass */
+  .shop-unit .s1-header {
+    margin-bottom: 10px; }
+  /* line 5, theme/lorashen/static/sass/partial/_shops.sass */
+  .shop-unit:not(:last-of-type) {
+    margin-bottom: 40px; }
+  /* line 7, theme/lorashen/static/sass/partial/_shops.sass */
+  .shop-unit__media {
+    min-height: 360px;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 20px;
+    position: relative; }
+    @media only screen and (min-width : 768px) {
+      /* line 7, theme/lorashen/static/sass/partial/_shops.sass */
+      .shop-unit__media {
+        margin-bottom: 0; } }
+/* line 16, theme/lorashen/static/sass/partial/_shops.sass */
+.shop-content {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column; }
+  /* line 21, theme/lorashen/static/sass/partial/_shops.sass */
+  .shop-content__address {
+    margin-bottom: 10px; }
+    /* line 23, theme/lorashen/static/sass/partial/_shops.sass */
+    .shop-content__address .ls-label {
+      font-weight: 400; }
+  /* line 26, theme/lorashen/static/sass/partial/_shops.sass */
+  .shop-content__phones {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 15px; }
+    /* line 30, theme/lorashen/static/sass/partial/_shops.sass */
+    .shop-content__phones a {
+      color: #333333;
+      font-size: 1rem; }
+      /* line 33, theme/lorashen/static/sass/partial/_shops.sass */
+      .shop-content__phones a:not(:last-of-type) {
+        margin-bottom: 5px; }
+  /* line 36, theme/lorashen/static/sass/partial/_shops.sass */
+  .shop-content__open-hours {
+    display: inline-flex;
+    font-size: 0.875rem; }
+    /* line 39, theme/lorashen/static/sass/partial/_shops.sass */
+    .shop-content__open-hours .open-hours:not(:last-of-type) {
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid lightgray; }
+
+/* line 44, theme/lorashen/static/sass/partial/_shops.sass */
+.shop-map {
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  /* line 52, theme/lorashen/static/sass/partial/_shops.sass */
+  .shop-map.shop-map--show {
+    opacity: 1 !important; }
+
+/* line 1, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-area {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 60px; }
+
+/* line 9, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-back {
+  grid-column: span 6;
+  display: flex;
+  justify-content: flex-end; }
+
+/* line 14, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-slot {
+  grid-column: span 6;
+  min-height: 200px;
+  padding: 20px;
+  background-color: #fafafa; }
+
+/* line 20, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit {
+  padding: 15px 0;
+  border-top: 1px solid #d8d8d8;
+  display: flex;
+  flex-wrap: wrap; }
+  @media only screen and (min-width: 768px) {
+    /* line 20, theme/lorashen/static/sass/partial/_cart.sass */
+    .cart-unit {
+      flex-wrap: nowrap; } }
+/* line 27, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit:last-of-type {
+  border-bottom: 1px solid #d8d8d8; }
+
+/* line 30, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__img {
+  width: 100px;
+  height: 100px;
+  min-width: 100px; }
+  /* line 34, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+/* line 39, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__data {
+  width: 100%;
+  padding: 20px 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center; }
+  @media only screen and (min-width: 764px) {
+    /* line 39, theme/lorashen/static/sass/partial/_cart.sass */
+    .cart-unit__data {
+      width: auto;
+      min-width: 180px;
+      max-width: 420px;
+      width: 100%;
+      padding: 0 20px; } }
+/* line 54, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__name {
+  width: 100%;
+  font-size: 1.125rem;
+  text-transform: uppercase; }
+
+/* line 59, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__sku {
+  display: inline-flex;
+  font-size: 0.925rem; }
+  /* line 62, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit__sku span {
+    padding: 0 5px; }
+
+/* line 66, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__price {
+  display: inline-flex;
+  font-size: 0.925rem; }
+  /* line 69, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit__price span {
+    padding: 0 5px; }
+
+/* line 72, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  margin: 15px 0; }
+  @media only screen and (min-width: 768px) {
+    /* line 72, theme/lorashen/static/sass/partial/_cart.sass */
+    .cart-unit__controls {
+      margin: 0;
+      width: 160px;
+      min-width: 160px; } }
+  /* line 83, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit__controls button {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8d8d8; }
+  /* line 90, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit__controls .js-btn-minus, .cart-unit__controls .js-btn-plus {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8d8d8;
+    cursor: pointer; }
+  /* line 98, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit__controls input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 0.875rem; }
+
+/* line 104, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__controls-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: nowrap; }
+
+/* line 109, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__qty {
+  width: 100px;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    /* line 109, theme/lorashen/static/sass/partial/_cart.sass */
+    .cart-unit__qty {
+      text-align: right; } }
+/* line 115, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__amount {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 120, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit__amount .not-in-stock {
+    display: none; }
+
+/* line 123, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-row-total {
+  display: inline-flex;
+  font-size: 0.925rem; }
+
+/* line 127, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit-error {
+  padding-right: 3px;
+  padding-left: 3px;
+  border: 2px solid #da4453 !important;
+  border-radius: 4px;
+  position: relative;
+  font-size: 0.875rem; }
+  /* line 134, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit-error .cart-unit__controls {
+    visibility: hidden; }
+  /* line 137, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit-error .cart-unit__amount .not-in-stock {
+    display: block;
+    color: #da4453; }
+  /* line 140, theme/lorashen/static/sass/partial/_cart.sass */
+  .cart-unit-error .cart-unit__amount .cart-row-total {
+    display: none; }
+
+/* line 143, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-row-total__title {
+  margin-right: 5px; }
+
+/* line 147, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-row-total__total span:not(:last-of-type) {
+  margin-right: 2px; }
+
+/* line 150, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__remove {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (min-width: 768px) {
+    /* line 150, theme/lorashen/static/sass/partial/_cart.sass */
+    .cart-unit__remove {
+      flex-grow: 0; } }
+/* line 158, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-unit__remove-wrapper {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  color: #a8a8a8;
+  cursor: pointer; }
+
+/* line 168, theme/lorashen/static/sass/partial/_cart.sass */
+.summary-slot {
+  grid-column: span 6;
+  min-height: 100px;
+  background-color: #fafafa;
+  padding: 25px 10px; }
+  @media only screen and (min-width: 375px) {
+    /* line 168, theme/lorashen/static/sass/partial/_cart.sass */
+    .summary-slot {
+      padding: 25px 20px; } }
+/* line 176, theme/lorashen/static/sass/partial/_cart.sass */
+.summary-slot__inner {
+  display: flex;
+  padding-bottom: 20px;
+  flex-direction: column; }
+  @media only screen and (min-width: 768px) {
+    /* line 176, theme/lorashen/static/sass/partial/_cart.sass */
+    .summary-slot__inner {
+      flex-direction: row;
+      justify-content: space-between; } }
+/* line 185, theme/lorashen/static/sass/partial/_cart.sass */
+.discount-block {
+  margin-bottom: 20px; }
+  @media only screen and (min-width: 768px) {
+    /* line 185, theme/lorashen/static/sass/partial/_cart.sass */
+    .discount-block {
+      margin-bottom: 0; } }
+/* line 190, theme/lorashen/static/sass/partial/_cart.sass */
+.discount-block__title {
+  font-size: 0.875rem;
+  font-weight: 300; }
+
+/* line 194, theme/lorashen/static/sass/partial/_cart.sass */
+.discount-block__group {
+  display: inline-flex;
+  align-items: center; }
+
+/* line 198, theme/lorashen/static/sass/partial/_cart.sass */
+.discount-block__input {
+  height: 1.625rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  outline: 0;
+  border: 1px solid #d8d8d8; }
+  /* line 207, theme/lorashen/static/sass/partial/_cart.sass */
+  .discount-block__input:focus {
+    border: 1px solid #00a395; }
+
+/* line 210, theme/lorashen/static/sass/partial/_cart.sass */
+.client-summary {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px; }
+
+/* line 216, theme/lorashen/static/sass/partial/_cart.sass */
+.summary-unit {
+  width: 100%;
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+  grid-column: span 12; }
+  @media only screen and (min-width: 580px) {
+    /* line 216, theme/lorashen/static/sass/partial/_cart.sass */
+    .summary-unit {
+      grid-column: span 6; } }
+  @media only screen and (min-width: 992px) {
+    /* line 216, theme/lorashen/static/sass/partial/_cart.sass */
+    .summary-unit {
+      grid-column: span 4; } }
+/* line 228, theme/lorashen/static/sass/partial/_cart.sass */
+.summary-unit--comment {
+  grid-column: span 12; }
+
+/* line 231, theme/lorashen/static/sass/partial/_cart.sass */
+.summary-unit__title {
+  font-weight: 500;
+  margin-bottom: 5px; }
+
+/* line 234, theme/lorashen/static/sass/partial/_cart.sass */
+.summary-unit__row {
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 2px; }
+
+/* line 239, theme/lorashen/static/sass/partial/_cart.sass */
+.amount-block--confirm {
+  margin-left: auto; }
+  /* line 241, theme/lorashen/static/sass/partial/_cart.sass */
+  .amount-block--confirm .total-block {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #d8d8d8; }
+
+/* line 248, theme/lorashen/static/sass/partial/_cart.sass */
+.amount-block {
+  margin-left: auto; }
+
+/* line 250, theme/lorashen/static/sass/partial/_cart.sass */
+.amount-block__row {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9375rem;
+  font-weight: 300; }
+
+/* line 256, theme/lorashen/static/sass/partial/_cart.sass */
+.total-block__row {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9375rem;
+  font-weight: 400; }
+
+/* line 262, theme/lorashen/static/sass/partial/_cart.sass */
+.amount-block__title,
+.total-block__title {
+  text-transform: uppercase; }
+
+/* line 266, theme/lorashen/static/sass/partial/_cart.sass */
+.amount-block__value,
+.total-block__value {
+  min-width: 110px;
+  text-align: right; }
+
+/* line 271, theme/lorashen/static/sass/partial/_cart.sass */
+.summary-slot__total {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid #d8d8d8;
+  display: flex;
+  justify-content: flex-end; }
+
+/* line 278, theme/lorashen/static/sass/partial/_cart.sass */
+.data-slot {
+  min-height: 100px;
+  grid-column: span 6; }
+  @media only screen and (min-width: 600px) {
+    /* line 278, theme/lorashen/static/sass/partial/_cart.sass */
+    .data-slot {
+      grid-column: span 3; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 278, theme/lorashen/static/sass/partial/_cart.sass */
+    .data-slot {
+      grid-column: span 2; } }
+/* line 292, theme/lorashen/static/sass/partial/_cart.sass */
+.data-slot__customer .ds-input {
+  margin-bottom: 15px; }
+
+/* line 296, theme/lorashen/static/sass/partial/_cart.sass */
+.data-slot__who .ls-checkbox {
+  margin-bottom: 15px; }
+
+/* line 298, theme/lorashen/static/sass/partial/_cart.sass */
+.data-slot__who .ds-input {
+  margin-bottom: 15px; }
+
+/* line 301, theme/lorashen/static/sass/partial/_cart.sass */
+.data-slot__title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 15px; }
+
+/* line 306, theme/lorashen/static/sass/partial/_cart.sass */
+.data-slot__subtitle {
+  font-size: 0.875rem;
+  font-weight: 400; }
+
+/* line 310, theme/lorashen/static/sass/partial/_cart.sass */
+.data-slot__intervals--error {
+  border: 1px solid #da4453; }
+
+/* line 313, theme/lorashen/static/sass/partial/_cart.sass */
+.ds-input {
+  width: 100%;
+  position: relative; }
+  /* line 318, theme/lorashen/static/sass/partial/_cart.sass */
+  .ds-input.ds-input--error .ds-input__message {
+    color: #da4453; }
+  /* line 321, theme/lorashen/static/sass/partial/_cart.sass */
+  .ds-input.ds-input--error .ds-input__input {
+    border: 1px solid #da4453; }
+
+/* line 324, theme/lorashen/static/sass/partial/_cart.sass */
+.ds-input__title {
+  display: inline-block;
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 400; }
+
+/* line 330, theme/lorashen/static/sass/partial/_cart.sass */
+.ds-input__message {
+  font-size: 0.75rem;
+  font-weight: 300;
+  position: absolute;
+  top: 0.5rem;
+  right: 0; }
+
+/* line 338, theme/lorashen/static/sass/partial/_cart.sass */
+.ds-input__input {
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  padding: 5px; }
+  /* line 342, theme/lorashen/static/sass/partial/_cart.sass */
+  .ds-input__input:focus {
+    border: 1px solid #00a395;
+    outline: 0; }
+
+/* line 346, theme/lorashen/static/sass/partial/_cart.sass */
+.data-slot__message {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: justify; }
+
+/* line 352, theme/lorashen/static/sass/partial/_cart.sass */
+.delivery-type-select {
+  padding: 5px 0 15px; }
+
+/* line 355, theme/lorashen/static/sass/partial/_cart.sass */
+.selfpick {
+  width: 100%;
+  height: 300px; }
+
+/* line 359, theme/lorashen/static/sass/partial/_cart.sass */
+.selfpick__date {
+  margin-bottom: 15px; }
+
+/* line 361, theme/lorashen/static/sass/partial/_cart.sass */
+.selfpick__time {
+  margin-bottom: 15px; }
+  /* line 363, theme/lorashen/static/sass/partial/_cart.sass */
+  .selfpick__time .data-slot__subtitle {
+    margin-bottom: 5px; }
+
+/* line 366, theme/lorashen/static/sass/partial/_cart.sass */
+.selfpick__where {
+  display: flex;
+  width: 100%;
+  flex-direction: column; }
+
+/* line 371, theme/lorashen/static/sass/partial/_cart.sass */
+.courier {
+  width: 100%; }
+
+/* line 374, theme/lorashen/static/sass/partial/_cart.sass */
+.courier-date-time .data-slot__subtitle {
+  margin-bottom: 5px; }
+
+/* line 376, theme/lorashen/static/sass/partial/_cart.sass */
+.courier__city {
+  margin-bottom: 15px; }
+
+/* line 379, theme/lorashen/static/sass/partial/_cart.sass */
+.courier-city__note {
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #666666; }
+
+/* line 384, theme/lorashen/static/sass/partial/_cart.sass */
+.courier__address {
+  margin-bottom: 15px; }
+
+/* line 387, theme/lorashen/static/sass/partial/_cart.sass */
+.courier__date {
+  margin-bottom: 10px; }
+  /* line 389, theme/lorashen/static/sass/partial/_cart.sass */
+  .courier__date .ds-input__title {
+    font-size: 0.75rem; }
+
+/* line 392, theme/lorashen/static/sass/partial/_cart.sass */
+.courier__time {
+  margin-bottom: 15px; }
+  /* line 394, theme/lorashen/static/sass/partial/_cart.sass */
+  .courier__time .ds-input__title {
+    font-size: 0.75rem; }
+
+/* line 397, theme/lorashen/static/sass/partial/_cart.sass */
+.warning-message {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: bisque;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-bottom: 10px; }
+
+/* line 405, theme/lorashen/static/sass/partial/_cart.sass */
+.warning-message__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding-left: 10px; }
+
+/* line 412, theme/lorashen/static/sass/partial/_cart.sass */
+.payment {
+  margin-bottom: 15px; }
+  /* line 414, theme/lorashen/static/sass/partial/_cart.sass */
+  .payment .ls-radio {
+    width: 100%; }
+
+/* line 417, theme/lorashen/static/sass/partial/_cart.sass */
+.comment {
+  margin-bottom: 20px; }
+  /* line 419, theme/lorashen/static/sass/partial/_cart.sass */
+  .comment textarea {
+    width: 100%;
+    resize: none;
+    border: 1px solid #d8d8d8; }
+    /* line 423, theme/lorashen/static/sass/partial/_cart.sass */
+    .comment textarea:focus {
+      border: 1px solid #00a395;
+      outline: none;
+      box-shadow: none; }
+
+/* line 427, theme/lorashen/static/sass/partial/_cart.sass */
+.need-help {
+  background-color: #fafafa;
+  padding: 15px 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 30px; }
+  /* line 434, theme/lorashen/static/sass/partial/_cart.sass */
+  .need-help .data-slot__subtitle {
+    text-align: center;
+    margin-bottom: 10px; }
+
+/* line 438, theme/lorashen/static/sass/partial/_cart.sass */
+.need-help__message {
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-align: center; }
+
+/* line 443, theme/lorashen/static/sass/partial/_cart.sass */
+.need-help__phone {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #242729;
+  text-align: center; }
+  /* line 448, theme/lorashen/static/sass/partial/_cart.sass */
+  .need-help__phone:hover, .need-help__phone:focus {
+    color: #00a395; }
+
+/* line 452, theme/lorashen/static/sass/partial/_cart.sass */
+.make-order {
+  display: flex;
+  width: 100%;
+  justify-content: center; }
+
+/* line 457, theme/lorashen/static/sass/partial/_cart.sass */
+.make-order-confirm {
+  grid-column: span 6;
+  display: flex;
+  justify-content: flex-end; }
+
+/* line 462, theme/lorashen/static/sass/partial/_cart.sass */
+.checkout-final {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  font-weight: 300; }
+
+/* line 471, theme/lorashen/static/sass/partial/_cart.sass */
+.checkout-final__result {
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+
+/* line 474, theme/lorashen/static/sass/partial/_cart.sass */
+.checkout-final__message {
+  max-width: 320px;
+  text-align: center; }
+
+/* line 478, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-form {
+  grid-column: span 6; }
+
+/* line 481, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-checkout {
+  grid-column: span 6; }
+
+/* line 483, theme/lorashen/static/sass/partial/_cart.sass */
+.cart-checkout__inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 60px; }
+
+/* line 1, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+footer {
+  width: 100%;
+  background-color: #fcfcfc;
+  border-top: 1px solid #c9c9c9; }
+
+/* line 6, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+.footer-inner {
+  min-height: 200px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width : 768px) {
+    /* line 6, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-inner {
+      border-top: none;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      max-width: 750px; } }
+  @media only screen and (min-width : 992px) {
+    /* line 6, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-inner {
+      max-width: 970px;
+      flex-direction: row; } }
+  @media only screen and (min-width : 1200px) {
+    /* line 6, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-inner {
+      max-width: 1170px; } }
+/* line 29, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+.footer-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width : 992px) {
+    /* line 29, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-nav {
+      width: 70%;
+      flex-direction: row; } }
+/* line 37, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+.footer-media {
+  width: 100%;
+  padding-top: 10px; }
+  @media only screen and (min-width : 992px) {
+    /* line 37, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-media {
+      width: 30%; } }
+  /* line 44, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-media__title {
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-size: 0.875rem;
+    text-transform: uppercase; }
+
+/* line 49, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+.footer-subscribe {
+  margin-bottom: 15px; }
+  /* line 51, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-subscribe__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 30px;
+    width: 100%;
+    max-width: 290px; }
+    @media only screen and (min-width : 992px) {
+      /* line 51, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+      .footer-subscribe__inner {
+        max-width: 100%; } }
+  /* line 60, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-subscribe__input {
+    width: 100%;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: none;
+    border-radius: 0;
+    outline: none;
+    font-size: 0.875rem; }
+  /* line 69, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-subscribe__submit {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000000;
+    padding: 0 10px;
+    font-size: 0.875rem;
+    color: #ffffff;
+    background-color: #000000;
+    transition: all .2s ease-in-out;
+    text-transform: uppercase; }
+    /* line 79, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-subscribe__submit:hover, .footer-subscribe__submit:focus {
+      color: #ffffff;
+      background-color: #926a36;
+      border-color: #926a36; }
+
+/* line 85, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+.footer-media__links {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap; }
+
+/* line 90, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+.footer-media__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  opacity: .8;
+  transition: all .3s ease-in-out;
+  background-repeat: no-repeat; }
+  /* line 97, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-media__icon:not(:last-of-type) {
+    margin-right: 10px; }
+  /* line 99, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-media__icon:focus, .footer-media__icon:hover {
+    opacity: 1; }
+
+/* line 104, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+[data-icon='instagram'] {
+  background-image: url("/static/img/sprite-ico-ls.png");
+  background-position: 0px -48px; }
+
+/* line 109, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+[data-icon='facebook'] {
+  background-image: url("/static/img/sprite-ico-ls.png");
+  background-position: -48px -48px; }
+
+/* line 113, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+[data-icon='pinterest'] {
+  background-image: url("/static/img/sprite-ico-ls.png");
+  background-position: -24px -48px; }
+
+/* line 117, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+[data-icon='youtube'] {
+  background-image: url("/static/img/sprite-ico-ls.png");
+  background-position: -72px -48px; }
+
+/* line 121, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+.footer-navblock {
+  padding-top: 10px;
+  border-bottom: 1px solid #c9c9c9; }
+  @media only screen and (min-width : 992px) {
+    /* line 121, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-navblock {
+      border-bottom: none; }
+      /* line 126, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+      .footer-navblock:not(:last-of-type) {
+        margin-right: 40px; } }
+  /* line 129, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-navblock__header {
+    margin: 0;
+    padding: 0 0 10px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    text-transform: uppercase; }
+    /* line 135, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-navblock__header:after {
+      content: '+';
+      font-size: 16px;
+      font-weight: 300;
+      float: right;
+      margin-top: -2px;
+      margin-right: 8px;
+      transition: transform .3s ease-in-out;
+      transform-origin: 4.5px 10.5px; }
+      @media only screen and (min-width : 480px) {
+        /* line 135, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+        .footer-navblock__header:after {
+          margin-top: auto; } }
+    @media only screen and (min-width : 992px) {
+      /* line 129, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+      .footer-navblock__header {
+        cursor: auto; }
+        /* line 148, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+        .footer-navblock__header:after {
+          display: none; } }
+    /* line 151, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-navblock__header.open:after {
+      transform: rotate(45deg) scale(1.08); }
+  /* line 155, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-navblock ul {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    padding-left: 10px;
+    padding-bottom: 0; }
+    @media only screen and (min-width : 992px) {
+      /* line 155, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+      .footer-navblock ul {
+        height: auto;
+        max-height: 1000px;
+        padding-left: 0;
+        padding-bottom: 0; } }
+    /* line 166, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-navblock ul.open {
+      max-height: 1000px;
+      padding-bottom: 20px; }
+  /* line 169, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+  .footer-navblock__navlink {
+    font-size: 0.75rem; }
+    /* line 171, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-navblock__navlink:not(:last-of-type) {
+      margin-bottom: 5px; }
+    /* line 173, theme/lorashen/static/sass/partial/_footer-corporate.sass */
+    .footer-navblock__navlink > a {
+      color: #000000;
+      text-transform: uppercase; }
+      /* line 100, theme/lorashen/static/sass/partial/_vars.sass */
+      .footer-navblock__navlink > a:hover, .footer-navblock__navlink > a:focus {
+        color: #926a36;
+        text-decoration: none; }
+
+/* line 1, theme/lorashen/static/sass/partial/_datepicker.sass */
+.datepicker-wrapper {
+  position: relative; }
+  /* line 3, theme/lorashen/static/sass/partial/_datepicker.sass */
+  .datepicker-wrapper:after {
+    content: url('data:image/svg+xml; utf8, <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" fill="#999999"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    display: inline-block;
+    line-height: 1;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: -1; }
+  /* line 11, theme/lorashen/static/sass/partial/_datepicker.sass */
+  .datepicker-wrapper input {
+    background-color: transparent;
+    cursor: pointer; }
+
+/* line 14, theme/lorashen/static/sass/partial/_datepicker.sass */
+.ui-datepicker {
+  font-family: "Roboto", sans-serif;
+  width: 280px;
+  background-color: #ffffff;
+  padding: 3px;
+  margin-top: 5px;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px; }
+
+/* line 23, theme/lorashen/static/sass/partial/_datepicker.sass */
+.ui-datepicker-header {
+  display: flex;
+  width: 100%;
+  padding: 10px 15px;
+  justify-content: space-between;
+  align-items: center; }
+
+/* line 30, theme/lorashen/static/sass/partial/_datepicker.sass */
+.ui-datepicker-prev {
+  order: 0; }
+
+/* line 33, theme/lorashen/static/sass/partial/_datepicker.sass */
+.ui-datepicker-next {
+  order: 2; }
+
+/* line 36, theme/lorashen/static/sass/partial/_datepicker.sass */
+.ui-datepicker-calendar {
+  width: 100%; }
+  /* line 38, theme/lorashen/static/sass/partial/_datepicker.sass */
+  .ui-datepicker-calendar td {
+    width: calc(100%/7);
+    height: 39px;
+    padding: 2px; }
+    /* line 42, theme/lorashen/static/sass/partial/_datepicker.sass */
+    .ui-datepicker-calendar td a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%; }
+
+/* line 49, theme/lorashen/static/sass/partial/_datepicker.sass */
+a.ui-state-default {
+  color: #242729;
+  font-size: 0.875rem;
+  border: 1px solid #9e9e9e; }
+  /* line 53, theme/lorashen/static/sass/partial/_datepicker.sass */
+  a.ui-state-default:hover, a.ui-state-default:focus {
+    color: #00a395; }
+  /* line 57, theme/lorashen/static/sass/partial/_datepicker.sass */
+  a.ui-state-default.ui-state-active {
+    color: #ffffff;
+    background-color: #926a36;
+    border: 1px solid #926a36; }
+    /* line 61, theme/lorashen/static/sass/partial/_datepicker.sass */
+    a.ui-state-default.ui-state-active:hover, a.ui-state-default.ui-state-active:focus {
+      color: #ffffff;
+      background-color: #7f5c2f;
+      border: 1px solid #7f5c2f; }
+
+/* line 69, theme/lorashen/static/sass/partial/_datepicker.sass */
+a.ui-state-highlight {
+  color: #ffffff;
+  background-color: #00a395;
+  border: 1px solid #00a395; }
+  /* line 73, theme/lorashen/static/sass/partial/_datepicker.sass */
+  a.ui-state-highlight:hover, a.ui-state-highlight:focus {
+    color: #ffffff;
+    background-color: #008a7e;
+    border: 1px solid #008a7e; }
+
+/* line 79, theme/lorashen/static/sass/partial/_datepicker.sass */
+a.ui-priority-secondary {
+  color: #c9c9c9;
+  font-size: 0.875rem;
+  border: 1px solid #dddddd; }
+
+/* line 85, theme/lorashen/static/sass/partial/_datepicker.sass */
+.ui-state-disabled span.ui-state-default {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: #999999;
+  background-color: #fafafa;
+  border: 1px solid #d8d8d8; }
+
+/* line 1, theme/lorashen/static/sass/partial/_countdown.sass */
+#clock {
+  max-width: 280px;
+  width: 100%;
+  padding: 50px 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+  /* line 8, theme/lorashen/static/sass/partial/_countdown.sass */
+  #clock span {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #926a36;
+    color: #ffffff;
+    position: relative; }
+    /* line 19, theme/lorashen/static/sass/partial/_countdown.sass */
+    #clock span:before {
+      color: #926a36;
+      font-size: 14px;
+      font-weight: 300;
+      position: absolute;
+      top: -22px; }
+    /* line 25, theme/lorashen/static/sass/partial/_countdown.sass */
+    #clock span:nth-of-type(1):before {
+      content: 'Дней';
+      left: 8px; }
+    /* line 28, theme/lorashen/static/sass/partial/_countdown.sass */
+    #clock span:nth-of-type(2):before {
+      content: 'Часов';
+      left: 4px; }
+    /* line 31, theme/lorashen/static/sass/partial/_countdown.sass */
+    #clock span:nth-of-type(3):before {
+      content: 'Минут';
+      left: 5px; }
+    /* line 34, theme/lorashen/static/sass/partial/_countdown.sass */
+    #clock span:nth-of-type(4):before {
+      content: 'Секунд';
+      left: 1px; }
+
+/* line 2, theme/lorashen/static/sass/partial/_error.sass */
+.cart-checkout .form-errors {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: lightgoldenrodyellow; }
+  /* line 7, theme/lorashen/static/sass/partial/_error.sass */
+  .cart-checkout .form-errors > .alert-danger {
+    color: red; }
+
+/* line 9, theme/lorashen/static/sass/partial/_ls-forms.sass */
+.f-group {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  padding-bottom: 20px;
+  position: relative; }
+  /* line 15, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .f-group--vertical {
+    flex-direction: column; }
+  /* line 18, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .f-group.has-error .f-group__input {
+    border-color: #da4453; }
+  /* line 20, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .f-group.has-error .f-group__helper {
+    color: #da4453; }
+  /* line 24, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .f-group__input {
+    padding: 5px;
+    border: 1px solid #999999; }
+    /* line 27, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .f-group__input:focus {
+      outline: 0;
+      border: 1px solid #926a36; }
+  /* line 30, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .f-group__helper {
+    font-size: 0.75rem;
+    font-weight: 300;
+    position: absolute;
+    right: 5px;
+    bottom: 2px; }
+
+/* line 44, theme/lorashen/static/sass/partial/_ls-forms.sass */
+.r-group {
+  display: inline-flex;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem; }
+  /* line 49, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .r-group__title {
+    display: inline-flex;
+    padding: 3px 0 3px 20px;
+    position: relative; }
+    /* line 53, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .r-group__title:before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid #999999;
+      transform: translateY(-60%) translateZ(0px);
+      position: absolute;
+      top: 50%;
+      left: 2px; }
+  /* line 65, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .r-group__input {
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1; }
+    /* line 71, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .r-group__input:checked + .r-group__title:after {
+      content: '';
+      display: block;
+      width: 11px;
+      height: 11px;
+      background-color: #926a36;
+      border-radius: 50%;
+      transform: translateY(-63%) translateZ(0px);
+      position: absolute;
+      top: 50%;
+      left: 4px; }
+
+/* line 87, theme/lorashen/static/sass/partial/_ls-forms.sass */
+.workshop-form {
+  width: 100%;
+  margin: 0 auto 0 0; }
+  @media only screen and (min-width: 480px) {
+    /* line 87, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .workshop-form {
+      width: 70%; } }
+  @media only screen and (min-width: 768px) {
+    /* line 87, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .workshop-form {
+      width: 60%; } }
+  @media only screen and (min-width: 992px) {
+    /* line 87, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .workshop-form {
+      width: 80%; } }
+  @media only screen and (min-width: 1200px) {
+    /* line 87, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .workshop-form {
+      width: 100%;
+      max-width: 460px; } }
+  /* line 100, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .workshop-form__title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #926a36;
+    text-align: center;
+    text-transform: uppercase; }
+  /* line 107, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .workshop-form__selector {
+    margin-bottom: 20px; }
+  /* line 111, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .workshop-form .r-group {
+    font-weight: 300; }
+    /* line 113, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .workshop-form .r-group:not(:last-of-type) {
+      margin-right: 10px; }
+    /* line 115, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .workshop-form .r-group label {
+      cursor: pointer; }
+  /* line 117, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .workshop-form .f-group {
+    margin-bottom: 0; }
+  /* line 120, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .workshop-form__disabled {
+    display: inline-flex;
+    padding: 0 1rem;
+    height: 1.875rem;
+    align-items: center;
+    border: 1px solid #999999;
+    background-color: #bbbbbb;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: not-allowed; }
+  /* line 132, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .workshop-form__response {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #926a36; }
+
+/* line 139, theme/lorashen/static/sass/partial/_ls-forms.sass */
+.shadow-2 {
+  box-shadow: 0 4px 16px 0px rgba(0, 0, 0, 0.2); }
+
+/* line 142, theme/lorashen/static/sass/partial/_ls-forms.sass */
+.v-btn {
+  display: inline-flex;
+  padding: .5rem 1rem;
+  height: 1.875rem;
+  justify-content: center;
+  align-items: center; }
+
+/* line 149, theme/lorashen/static/sass/partial/_ls-forms.sass */
+.v-btn--inactive {
+  background-color: #bbbbbb;
+  cursor: not-allowed;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400; }
+
+/* line 157, theme/lorashen/static/sass/partial/_ls-forms.sass */
+.v-btn--active {
+  background-color: #00a395;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #ffffff;
+  transition: background-color .2s ease-in-out; }
+  /* line 166, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .v-btn--active span {
+    display: inline-block;
+    line-height: 1; }
+  /* line 169, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .v-btn--active:hover, .v-btn--active:active {
+    background-color: #008a7e; }
+
+/* line 172, theme/lorashen/static/sass/partial/_ls-forms.sass */
+.v-btn--await {
+  cursor: not-allowed;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #9e9e9e;
+  min-width: 130px; }
+  /* line 178, theme/lorashen/static/sass/partial/_ls-forms.sass */
+  .v-btn--await span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    transition: all .5s ease-in-out;
+    animation-name: awaitbtn;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; }
+    /* line 188, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .v-btn--await span:nth-of-type(1) {
+      animation-delay: 0s; }
+    /* line 191, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .v-btn--await span:nth-of-type(2) {
+      animation-delay: .5s; }
+    /* line 194, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .v-btn--await span:nth-of-type(3) {
+      animation-delay: 1s; }
+    /* line 197, theme/lorashen/static/sass/partial/_ls-forms.sass */
+    .v-btn--await span:not(:last-of-type) {
+      margin-right: 10px; }
+
+@keyframes awaitbtn {
+  0% {
+    background-color: #9e9e9e; }
+  100% {
+    background-color: #bdbdbd; }
+  0% {
+    background-color: #9e9e9e; } }
+
+/* line 1, theme/lorashen/static/sass/partial/_portfolio.sass */
+.portfolio-card-wrapper {
+  margin-bottom: 4rem; }
+
+/* line 4, theme/lorashen/static/sass/partial/_portfolio.sass */
+.portfolio-card {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 992px) {
+    /* line 4, theme/lorashen/static/sass/partial/_portfolio.sass */
+    .portfolio-card {
+      flex-direction: row;
+      align-items: center; } }
+  /* line 11, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .portfolio-card__preview {
+    display: block;
+    width: 100%;
+    height: 300px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #bebebe; }
+    @media only screen and (min-width: 992px) {
+      /* line 11, theme/lorashen/static/sass/partial/_portfolio.sass */
+      .portfolio-card__preview {
+        height: 300px;
+        margin-bottom: initial;
+        width: 40%; } }
+  /* line 26, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .portfolio-card__content {
+    width: 100%; }
+    @media only screen and (min-width: 992px) {
+      /* line 26, theme/lorashen/static/sass/partial/_portfolio.sass */
+      .portfolio-card__content {
+        width: 60%;
+        padding-left: 30px; } }
+  /* line 32, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .portfolio-card__title {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase; }
+  /* line 36, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .portfolio-card__date {
+    margin-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 992px) {
+      /* line 36, theme/lorashen/static/sass/partial/_portfolio.sass */
+      .portfolio-card__date {
+        margin-bottom: 2rem; } }
+  /* line 43, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .portfolio-card__description {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 1rem; }
+  /* line 49, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .portfolio-card__details {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    flex-wrap: nowrap;
+    min-height: 2rem;
+    padding: 0 10px;
+    border: 1px solid black;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #000000;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out; }
+    /* line 63, theme/lorashen/static/sass/partial/_portfolio.sass */
+    .portfolio-card__details:hover, .portfolio-card__details:active {
+      color: #ffffff;
+      background-color: #926a36;
+      border: 1px solid #926a36; }
+
+/* line 69, theme/lorashen/static/sass/partial/_portfolio.sass */
+.contact-form {
+  width: 100%;
+  padding-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  /* line 76, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .contact-form__title {
+    margin-bottom: 25px;
+    text-align: center; }
+  /* line 79, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .contact-form .workshop-form {
+    margin: 0 auto;
+    position: relative;
+    padding: 15px; }
+    /* line 83, theme/lorashen/static/sass/partial/_portfolio.sass */
+    .contact-form .workshop-form__response {
+      height: 180px;
+      text-align: center; }
+    /* line 86, theme/lorashen/static/sass/partial/_portfolio.sass */
+    .contact-form .workshop-form__action {
+      padding-top: 15px;
+      display: flex;
+      justify-content: center; }
+  /* line 91, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .contact-form .f-group__input {
+    padding: 10px 5px;
+    border-radius: 4px; }
+  /* line 95, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .contact-form .v-btn {
+    padding: 10px 15px;
+    border-radius: 4px;
+    height: 38px; }
+  /* line 99, theme/lorashen/static/sass/partial/_portfolio.sass */
+  .contact-form .is-sending {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5; }
+
+/* line 111, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px; }
+
+/* line 118, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  animation: lds-default 1.2s linear infinite; }
+
+/* line 127, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(1) {
+  animation-delay: 0s;
+  top: 29px;
+  left: 53px; }
+
+/* line 132, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(2) {
+  animation-delay: -0.1s;
+  top: 18px;
+  left: 50px; }
+
+/* line 137, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(3) {
+  animation-delay: -0.2s;
+  top: 9px;
+  left: 41px; }
+
+/* line 142, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(4) {
+  animation-delay: -0.3s;
+  top: 6px;
+  left: 29px; }
+
+/* line 147, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(5) {
+  animation-delay: -0.4s;
+  top: 9px;
+  left: 18px; }
+
+/* line 152, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(6) {
+  animation-delay: -0.5s;
+  top: 18px;
+  left: 9px; }
+
+/* line 157, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(7) {
+  animation-delay: -0.6s;
+  top: 29px;
+  left: 6px; }
+
+/* line 162, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(8) {
+  animation-delay: -0.7s;
+  top: 41px;
+  left: 9px; }
+
+/* line 167, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(9) {
+  animation-delay: -0.8s;
+  top: 50px;
+  left: 18px; }
+
+/* line 172, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(10) {
+  animation-delay: -0.9s;
+  top: 53px;
+  left: 29px; }
+
+/* line 177, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(11) {
+  animation-delay: -1s;
+  top: 50px;
+  left: 41px; }
+
+/* line 182, theme/lorashen/static/sass/partial/_portfolio.sass */
+.lds-default div:nth-child(12) {
+  animation-delay: -1.1s;
+  top: 41px;
+  left: 50px; }
+
+@keyframes lds-default {
+  0%, 20%, 80%, 100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.5); } }
+
+/* line 1, theme/lorashen/static/sass/partial/_mixins.sass */
+.mr-0 {
+  margin-right: 0px !important; }
+
+/* line 3, theme/lorashen/static/sass/partial/_mixins.sass */
+.mr-1 {
+  margin-right: 1px !important; }
+
+/* line 5, theme/lorashen/static/sass/partial/_mixins.sass */
+.mr-5 {
+  margin-right: 5px !important; }
+
+/* line 7, theme/lorashen/static/sass/partial/_mixins.sass */
+.mr-10 {
+  margin-right: 10px !important; }

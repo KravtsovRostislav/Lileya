@@ -1,0 +1,25 @@
+.swal2-overflow {
+    overflow-x: visible;
+    overflow-y: visible;
+}
+.ui-datepicker-next{
+    cursor: pointer;
+}
+.ui-datepicker-prev{
+    cursor: pointer;
+}
+.swal2-title{
+    padding-top: 0;
+}
+.swal2-html-container{
+    padding-top: 0;
+}
+.swal2-actions{
+    margin-top: 0;
+}
+.swal2-validation-message{
+    margin-top: 0;
+}
+#ui-datepicker-div{
+    top: 55vh !important;
+}

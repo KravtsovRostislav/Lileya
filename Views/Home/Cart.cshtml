@@ -1,0 +1,331 @@
+﻿@model CartViewModel
+
+@{
+    ViewData["Title"] = "Корзина";
+}
+
+<section class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="product-upsale__header">Ваш кошик</h2>
+        </div>
+    </div>
+    <div class="cart-area">
+        <div class="cart-back">
+            <a class="btn-main-flx-brd" href="@Model.PreviousUrl">Продовжити покупки</a>
+        </div>
+        <div class="cart-slot" id="cart-items">
+            <div class="cart-slot__header">Ваше замовлення</div>      
+        </div>
+
+        <div class="summary-slot">
+            <div class="summary-slot__inner">
+                <div class="amount-block">
+                    <div class="amount-block__row">
+                        <div class="amount-block__title">всього:</div>
+                        <div class="amount-block__value">
+                            <span class="js-order-total" id="cart-total">0</span>
+                            <span>грн</span>
+                        </div>
+                    </div>
+
+                    <div class="amount-block__row">
+                        <div class="amount-block__title">доставка:</div>
+                        <div class="amount-block__value">
+                            <span class="js-shipping-total">0</span>
+                            <span>грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-slot__total">
+                <div class="total-block">
+                    <div class="total-block__row">
+                        <div class="total-block__title">всього:</div>
+                        <div class="total-block__value">
+                            <span class="js-order-total-all" id="cart-total-amount">0</span> <span>грн</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form class="cart-checkout" method="post" action="/post-cart">
+            <div class="cart-checkout__inner">
+                <div class="data-slot">
+                    <div class="data-slot__title">Ваші дані:</div>
+                    <div class="data-slot__customer">
+                        <div class="ds-input">
+                            <label class="ds-input__title">Прізвище, Ім'я:</label>
+                            <div class="ds-input__message">обов'язкове поле</div>
+                            <input type="text" name="FullName"
+                                   id="FullName" class="ds-input__input elip" maxlength="200" required>
+                        </div>
+                        <div class="ds-input">
+                            <label class="ds-input__title">Ваш Email:</label>
+                            <div class="ds-input__message">обов'язкове поле</div>
+                            <input type="email" name="Email" id="Email"
+                                   class="ds-input__input elip" maxlength="254" required>
+                        </div>
+                        <div class="ds-input">
+                            <label class="ds-input__title">Ваш телефон:</label>
+                            <div class="ds-input__message">обов'язкове поле</div>
+                            <input type="text" name="Phone" id="Phone"
+                                   class="ds-input__input elip" maxlength="20" required>
+                        </div>
+                        <div class="data-slot__message">
+                            Всі поля обов'язкові для заповнення. Інформація про Ваше замовлення буде відправлена на
+                            вказаний Вами номер телефону та електронну пошту!
+                        </div>
+                    </div>
+                </div>
+                <div class="data-slot">
+                    <div class="data-slot__title">Доставка:</div>
+                    <div class="data-slot__subtitle">Тип доставки</div>
+                    <div class="delivery-type-select">
+                        <div class="ls-radio">
+                            <input id="selfpick" type="radio" class="" name="DeliveryType" value="0" checked="">
+                            <label for="selfpick">Самовивіз</label>
+                        </div>
+                        <div class="ls-radio">
+                            <input id="courier" type="radio" class="" name="DeliveryType" value="1">
+                            <label for="courier">Кур'єрська доставка</label>
+                        </div>
+                    </div>
+
+                    <div class="selfpick" style="display: block;">
+                        <div class="selfpick__time">
+                            <div class="data-slot__subtitle">Час, коли Ви можете забрати букет?</div>
+                            <div class="data-slot__intervals">
+                                <div class="ls-time">
+                                    <input id="time-self-1" type="radio" class="elip" name="PickTime" value="09-12">
+                                    <label for="time-self-1">09 - 12</label>
+                                </div>
+
+                                <div class="ls-time">
+                                    <input id="time-self-2" type="radio" class="elip" name="PickTime" value="12-14">
+                                    <label for="time-self-2">12 - 14</label>
+                                </div>
+
+                                <div class="ls-time">
+                                    <input id="time-self-3" type="radio" class="elip" name="PickTime" value="14-16">
+                                    <label for="time-self-3">14 - 16</label>
+                                </div>
+
+                                <div class="ls-time">
+                                    <input id="time-self-4" type="radio" class="elip" name="PickTime" value="16-18">
+                                    <label for="time-self-4">16 - 18</label>
+                                </div>
+
+                                <div class="ls-time">
+                                    <input id="time-self-5" type="radio" class="elip" name="PickTime" value="18-20">
+                                    <label for="time-self-5">18 - 20</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selfpick__where">
+                            <div class="data-slot__subtitle">Заберу букет по адресу:</div>
+                            <div class="ls-radio">
+                                <input id="addr1" class="elip" type="radio" name="Address"
+                                       value="г. Киев, проспект Лобановского, 119/2">
+                                <label for="addr1">г. Киев, проспект Лобановского, 119/2</label>
+                            </div>
+                            <div class="ls-radio">
+                                <input id="addr2" class="elip" type="radio" name="Address"
+                                       value="г. Харьков, пр. Правды, 2">
+                                <label for="addr2">г. Харьков, пр. Правды, 2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courier" style="display: none;">
+                        <div class="courier-date-time">
+                            <div class="courier__time">
+                                <div class="data-slot__subtitle">Оберіть час:</div>
+                                <div class="data-slot__intervals">
+                                    <div class="ls-time">
+                                        <input id="time-courier-1" type="radio" class="elip" name="PickTime" value="09-12">
+                                        <label for="time-courier-1">09 - 12</label>
+                                    </div>
+
+                                    <div class="ls-time">
+                                        <input id="time-courier-2" type="radio" class="elip" name="PickTime" value="12-14">
+                                        <label for="time-courier-2">12 - 14</label>
+                                    </div>
+
+                                    <div class="ls-time">
+                                        <input id="time-courier-3" type="radio" class="elip" name="PickTime" value="14-16">
+                                        <label for="time-courier-3">14 - 16</label>
+                                    </div>
+
+                                    <div class="ls-time">
+                                        <input id="time-courier-4" type="radio" class="elip" name="PickTime" value="16-18">
+                                        <label for="time-courier-4">16 - 18</label>
+                                    </div>
+
+                                    <div class="ls-time">
+                                        <input id="time-courier-5" type="radio" class="elip" name="PickTime" value="18-20">
+                                        <label for="time-courier-5">18 - 20</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="courier__city">
+                                <div class="ds-input ds-input-city ">
+                                    <label for="City" class="ds-input__title">Місто:</label>
+                                    <div class="ds-input__message">обов'язкове поле</div>
+                                    <input id="City" type="text" class="ds-input__input" name="City" value="">
+                                </div>
+                                <div class="courier-city__note">
+                                    уточніть в менеджера Lileya можливість доставки в ваш регіон у вказаний час
+                                </div>
+                            </div>
+                            <div class="courier__address">
+                                <div class="ds-input">
+                                    <label class="ds-input__title">Адрес:</label>
+                                    <div class="ds-input__message">обов'язкове поле</div>
+                                    <input type="text" name="Address"
+                                           class="ds-input__input elip" maxlength="400">
+                                </div>
+                                <div class="courier-city__note">
+                                    Якщо не знаєте адресу, впишіть в поле «уточнити адресу в отримувача». Менеджер Lileya сам взнає всі деталі.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-slot">
+                    <div class="data-slot__title">Оплата:</div>
+                    <div class="data-slot__subtitle">Спосіб оплати</div>
+                    <div class="payment">
+                        <div class="ls-radio">
+                            <input id="cash" class="elip" type="radio" name="PayType"
+                                   value="0" checked="">
+                            <label for="cash">Готівкою при отриманні</label>
+                        </div>
+                        <div class="ls-radio">
+                            <input id="card" class="elip" type="radio" name="PayType" value="1">
+                            <label for="card">Платіжною карткою на сайті</label>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="data-slot__subtitle">Примітка до замовлення</div>
+                        <textarea name="Comment" v-model="test" rows="5" class="elip" cols="30"
+                                  id="id_additional_instructions"></textarea>
+                    </div>
+
+                    <div class="need-help">
+                        <div class="data-slot__subtitle">Потрібна допомога?</div>
+                        <div class="need-help__message">
+                            Телефон служби підтримки:
+                        </div>
+                        <a class="need-help__phone" href="tel:+380671111111">+380 (67) 111 11 11</a>
+                    </div>
+                    <div class="make-order">
+                        <input type="hidden" name="complete_order" value="Оформити замовлення">
+                        <input type="submit" name="complete_order" class="btn-main-flx" value="Оформити замовлення">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+@section Scripts
+{
+    <script src="~/js/jquery.maskedinput.min.js"></script>
+    <script src="~/js/checkout.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            let cart = localStorage.getItem('cart')
+            if (cart) {
+                cart = JSON.parse(cart)
+                document.getElementById('cart-total').innerText = cart.moneyAmount
+                document.getElementById('cart-total-amount').innerText = cart.moneyAmount + cart.deliveryCost
+                const cartBlock = document.getElementById('cart-items')
+                cart.products.forEach((x, index) => {
+                    cartBlock.innerHTML += `<div class="cart-unit">
+                            <div class="cart-unit__img">
+                                <img alt="${x.name} ${x.id}" src="${x.img}">
+                            </div>
+                            <div class="cart-unit__data">
+                                <div class="cart-unit__data-wrapper">
+                                    <div class="cart-unit__name">
+                                        ${x.name}
+                                    </div>
+                                    <div class="cart-unit__sku">Артикул: <span>${x.id}</span></div>
+                                    <div class="cart-unit__price">
+                                        ціна: <span class="cart-price">${x.price}</span> грн
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-unit__controls">
+                                <div class="cart-unit__controls-wrapper spin">
+                                    <span class="js-btn-minus" data-spin="${x.id}-minus" onclick="handleMinus(${x.id})">–</span>
+                                        <input class="cart-unit-data" readonly="" id="id_items-${x.id}-quantity" type="text" value="${x.qty}" name="items-${index}-quantity" />
+                                    <span class="js-btn-plus" data-spin="${x.id}-plus" onclick="handlePlus(${x.id})">+</span>
+                                </div>
+                            </div>
+                            <div class="cart-unit__amount">
+                                <div class="cart-row-total">
+                                    <div class="cart-row-total__title">
+                                        Сума:
+                                    </div>
+                                    <div class="cart-row-total__total">
+                                        <span id="${x.id}-total-price" class="cart-item-total-price item-${x.id}-total-price">${x.price * x.qty}</span>
+                                        <span>грн</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-unit__remove">
+                                <span class="cart-unit__remove-wrapper"
+                                   data-marker="#id_items-${index}" onclick="handleDelete(${x.id})">
+                                    ✖
+                                </span>
+                                <div class="hidden"><input type="checkbox" name="items-${index}-DELETE" id="id_items-${index}-DELETE"></div>
+                            </div>
+                        </div>`
+                })
+            }
+        })
+
+        function handleMinus(id) {
+            const cart = JSON.parse(localStorage.getItem('cart'))
+            cart.products.forEach(x => { if (x.id === id && x.qty > 1) {
+                x.qty -= 1
+                cart.moneyAmount -= x.price
+                cart.totalQuantity -= 1
+                document.getElementById('cart-count').innerText = cart.totalQuantity
+                document.getElementById(`id_items-${id}-quantity`).value = x.qty
+                document.getElementById(`${id}-total-price`).innerText = x.qty * x.price
+                document.getElementById('cart-total').innerText = cart.moneyAmount
+                document.getElementById('cart-total-amount').innerText = cart.moneyAmount + cart.deliveryCost
+            }})
+            localStorage.setItem('cart', JSON.stringify(cart))
+        }
+
+        function handlePlus(id) {
+            const cart = JSON.parse(localStorage.getItem('cart'))
+            cart.products.forEach(x => { if (x.id === id) { 
+                x.qty += 1
+                cart.moneyAmount += x.price
+                cart.totalQuantity += 1
+                document.getElementById('cart-count').innerText = cart.totalQuantity
+                document.getElementById(`id_items-${id}-quantity`).value = x.qty
+                document.getElementById(`${id}-total-price`).innerText = x.qty * x.price
+                document.getElementById('cart-total').innerText = cart.moneyAmount
+                document.getElementById('cart-total-amount').innerText = cart.moneyAmount + cart.deliveryCost
+            }})
+            localStorage.setItem('cart', JSON.stringify(cart))
+        }
+
+        function handleDelete(id) {
+            const cart = JSON.parse(localStorage.getItem('cart'))
+            const product = cart.products.find(x => x.id === id)
+            cart.moneyAmount -= product.price * product.qty
+            cart.totalQuantity -= product.qty
+            cart.products = cart.products.filter(x => x.id !== id)
+            localStorage.setItem('cart', JSON.stringify(cart))
+            window.location.reload()
+        }
+    </script>
+}
